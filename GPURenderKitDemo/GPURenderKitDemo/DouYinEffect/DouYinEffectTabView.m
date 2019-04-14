@@ -48,11 +48,16 @@ static const NSString *kEffectType = @"effectType";
 {
     
     self.tabViewData = [NSMutableArray array];
-    NSDictionary *dic1 = [self createDicEffectName:@"抖音三屏带滤镜" effectType:DouYinEffectType_GLImageThreePartition];
-    NSDictionary *dic2 = [self createDicEffectName:@"抖音四分镜" effectType:DouYinEffectType_GLImageFourPointsMirrorFilter];
-
+    NSDictionary *dic1 = [self createDicEffectName:@"三屏带滤镜" effectType:DouYinEffectType_GLImageThreePartition];
+    NSDictionary *dic2 = [self createDicEffectName:@"四屏" effectType:DouYinEffectType_GLImageFourPointsMirrorFilter];
+    NSDictionary *dic3 = [self createDicEffectName:@"电流" effectType:DouYinEffectType_GLImageGlitchEffectLineFilter];
+    NSDictionary *dic4 = [self createDicEffectName:@"格子故障" effectType:DouYinEffectType_GLImageGlitchEffectGridFilter];
+    
     [self.tabViewData addObject:dic1];
     [self.tabViewData addObject:dic2];
+    [self.tabViewData addObject:dic3];
+    [self.tabViewData addObject:dic4];
+
 
 }
 

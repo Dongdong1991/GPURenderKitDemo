@@ -9,6 +9,7 @@
 #ifndef GPURenderMacroHeader_h
 #define GPURenderMacroHeader_h
 
+#import "GLImageFilterEnumType.h"
 
 #define WEAKSELF __weak __typeof(&*self)weakSelf = self;
 

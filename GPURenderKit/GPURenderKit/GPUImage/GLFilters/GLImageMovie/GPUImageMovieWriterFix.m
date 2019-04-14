@@ -1,10 +1,10 @@
-#import "GLImageMovieWriter.h"
+#import "GPUImageMovieWriterFix.h"
 
 #import "GPUImageContext.h"
 #import "GLProgram.h"
 #import "GPUImageFilter.h"
 
-NSString *const kGLImageColorSwizzlingFragmentShaderString = SHADER_STRING
+NSString *const kGPUImageColorSwizzlingFragmentShaderStringFix = SHADER_STRING
 (
  varying highp vec2 textureCoordinate;
  
@@ -16,8 +16,9 @@ NSString *const kGLImageColorSwizzlingFragmentShaderString = SHADER_STRING
  }
 );
 
+static BOOL allowWriteAudio = NO;
 
-@interface GLImageMovieWriter ()
+@interface GPUImageMovieWriterFix ()
 {
     GLuint movieFramebuffer, movieRenderbuffer;
     
@@ -49,7 +50,7 @@ NSString *const kGLImageColorSwizzlingFragmentShaderString = SHADER_STRING
 
 @end
 
-@implementation GLImageMovieWriter
+@implementation GPUImageMovieWriterFix
 
 @synthesize hasAudioTrack = _hasAudioTrack;
 @synthesize encodingLiveVideo = _encodingLiveVideo;
@@ -109,7 +110,7 @@ NSString *const kGLImageColorSwizzlingFragmentShaderString = SHADER_STRING
         }
         else
         {
-            colorSwizzlingProgram = [_movieWriterContext programForVertexShaderString:kGPUImageVertexShaderString fragmentShaderString:kGLImageColorSwizzlingFragmentShaderString];
+            colorSwizzlingProgram = [_movieWriterContext programForVertexShaderString:kGPUImageVertexShaderString fragmentShaderString:kGPUImageColorSwizzlingFragmentShaderStringFix];
         }
         
         if (!colorSwizzlingProgram.initialized)
@@ -278,6 +279,7 @@ NSString *const kGLImageColorSwizzlingFragmentShaderString = SHADER_STRING
         }
     });
     isRecording = YES;
+    allowWriteAudio = NO;
 	//    [assetWriter startSessionAtSourceTime:kCMTimeZero];
 }
 
@@ -370,6 +372,11 @@ NSString *const kGLImageColorSwizzlingFragmentShaderString = SHADER_STRING
         return;
     }
     
+    if (!allowWriteAudio) {
+        return;
+    }
+
+    
 //    if (_hasAudioTrack && CMTIME_IS_VALID(startTime))
     if (_hasAudioTrack)
     {
@@ -454,7 +461,7 @@ NSString *const kGLImageColorSwizzlingFragmentShaderString = SHADER_STRING
         }
         
 //        NSLog(@"Recorded audio sample time: %lld, %d, %lld", currentSampleTime.value, currentSampleTime.timescale, currentSampleTime.epoch);
-        void(^write)() = ^() {
+        void(^write)(void) = ^() {
             while( ! assetWriterAudioInput.readyForMoreMediaData && ! _encodingLiveVideo && ! audioEncodingIsFinished ) {
                 NSDate *maxDate = [NSDate dateWithTimeIntervalSinceNow:0.5];
                 //NSLog(@"audio waiting...");
@@ -786,7 +793,7 @@ NSString *const kGLImageColorSwizzlingFragmentShaderString = SHADER_STRING
             }
         }
         
-        void(^write)() = ^() {
+        void(^write)(void) = ^() {
             while( ! assetWriterVideoInput.readyForMoreMediaData && ! _encodingLiveVideo && ! videoEncodingIsFinished ) {
                 NSDate *maxDate = [NSDate dateWithTimeIntervalSinceNow:0.1];
                 //            NSLog(@"video waiting...");
@@ -798,8 +805,11 @@ NSString *const kGLImageColorSwizzlingFragmentShaderString = SHADER_STRING
             }
             else if(self.assetWriter.status == AVAssetWriterStatusWriting)
             {
+                
                 if (![assetWriterPixelBufferInput appendPixelBuffer:pixel_buffer withPresentationTime:frameTime])
                     NSLog(@"Problem appending pixel buffer at time: %@", CFBridgingRelease(CMTimeCopyDescription(kCFAllocatorDefault, frameTime)));
+                allowWriteAudio = YES; 
+
             }
             else
             {

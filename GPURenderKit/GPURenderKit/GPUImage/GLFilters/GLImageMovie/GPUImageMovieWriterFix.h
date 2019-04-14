@@ -1,10 +1,9 @@
 #import <Foundation/Foundation.h>
 #import <AVFoundation/AVFoundation.h>
 #import "GPUImageContext.h"
+extern NSString *const kGPUImageColorSwizzlingFragmentShaderStringFix;
 
-extern NSString *const kGPUImageColorSwizzlingFragmentShaderString;
-
-@protocol GLImageMovieWriterDelegate <NSObject>
+@protocol GPUImageMovieWriterFixDelegate <NSObject>
 
 @optional
 - (void)movieRecordingCompleted;
@@ -12,7 +11,7 @@ extern NSString *const kGPUImageColorSwizzlingFragmentShaderString;
 
 @end
 
-@interface GLImageMovieWriter : NSObject <GPUImageInput>
+@interface GPUImageMovieWriterFix : NSObject <GPUImageInput>
 {
     BOOL alreadyFinishedRecording;
     
@@ -36,7 +35,7 @@ extern NSString *const kGPUImageColorSwizzlingFragmentShaderString;
 @property(readwrite, nonatomic) BOOL shouldInvalidateAudioSampleWhenDone;
 @property(nonatomic, copy) void(^completionBlock)(void);
 @property(nonatomic, copy) void(^failureBlock)(NSError*);
-@property(nonatomic, assign) id<GLImageMovieWriterDelegate> delegate;
+@property(nonatomic, assign) id<GPUImageMovieWriterFixDelegate> delegate;
 @property(readwrite, nonatomic) BOOL encodingLiveVideo;
 @property(nonatomic, copy) BOOL(^videoInputReadyCallback)(void);
 @property(nonatomic, copy) BOOL(^audioInputReadyCallback)(void);

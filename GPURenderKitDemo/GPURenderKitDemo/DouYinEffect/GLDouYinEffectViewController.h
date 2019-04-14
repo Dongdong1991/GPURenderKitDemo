@@ -17,7 +17,11 @@ typedef NS_ENUM(NSInteger,DouYinEffectType)
     DouYinEffectType_GLImageThreePartition = 0,
     /** 抖音四分镜 */
     DouYinEffectType_GLImageFourPointsMirrorFilter = 1,
-    
+    /** 毛刺 */
+    DouYinEffectType_GLImageGlitchEffectLineFilter,
+    /** 格子故障 */
+    DouYinEffectType_GLImageGlitchEffectGridFilter,
+
 };
 
 

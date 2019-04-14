@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B42C4F2D225DB9B400CF9B9B /* 6666.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B42C4F2A225DB9B400CF9B9B /* 6666.mp3 */; };
+		B42C4F4A225F3ACF00CF9B9B /* GLImageFilterListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B42C4F49225F3ACF00CF9B9B /* GLImageFilterListViewController.m */; };
 		B42EC0512252039600226FA0 /* GLDouYinEffectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B42EC0502252039600226FA0 /* GLDouYinEffectViewController.m */; };
 		B42EC0542252044900226FA0 /* DouYinEffectTabView.m in Sources */ = {isa = PBXBuildFile; fileRef = B42EC0532252044900226FA0 /* DouYinEffectTabView.m */; };
-		B42EC093225219C600226FA0 /* GPURenderKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B42EC0792252077B00226FA0 /* GPURenderKit.framework */; };
 		B4620D682220413400EE2876 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B4620D672220413400EE2876 /* AppDelegate.m */; };
 		B4620D702220413500EE2876 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4620D6F2220413500EE2876 /* Assets.xcassets */; };
 		B4620D732220413500EE2876 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4620D712220413500EE2876 /* LaunchScreen.storyboard */; };
@@ -18,6 +19,25 @@
 		B4620D8B2220413500EE2876 /* GPURenderKitDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B4620D8A2220413500EE2876 /* GPURenderKitDemoUITests.m */; };
 		B47A5ED4222127EE006E07A4 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B47A5ED3222127EE006E07A4 /* BaseViewController.m */; };
 		B47A5ED7222127FF006E07A4 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B47A5ED6222127FF006E07A4 /* MainViewController.m */; };
+		B49EF60C22622D6D00C220B0 /* GLImageFilterShowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B49EF60B22622D6D00C220B0 /* GLImageFilterShowViewController.m */; };
+		B49EF62B22634BDD00C220B0 /* UIImage+Rotate.m in Sources */ = {isa = PBXBuildFile; fileRef = B49EF62322634BDD00C220B0 /* UIImage+Rotate.m */; };
+		B49EF62C22634BDD00C220B0 /* GLImagePickerHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B49EF62422634BDD00C220B0 /* GLImagePickerHelper.m */; };
+		B49EF62D22634BDD00C220B0 /* GLSliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = B49EF62522634BDD00C220B0 /* GLSliderView.m */; };
+		B49EF62E22634BDD00C220B0 /* GLFilterInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = B49EF62922634BDD00C220B0 /* GLFilterInfoView.m */; };
+		B49EF63F2263541400C220B0 /* glitchPicture100.png in Resources */ = {isa = PBXBuildFile; fileRef = B49EF6382263541400C220B0 /* glitchPicture100.png */; };
+		B49EF6402263541400C220B0 /* glitchPicture003.png in Resources */ = {isa = PBXBuildFile; fileRef = B49EF6392263541400C220B0 /* glitchPicture003.png */; };
+		B49EF6412263541400C220B0 /* glitchPicture002.png in Resources */ = {isa = PBXBuildFile; fileRef = B49EF63A2263541400C220B0 /* glitchPicture002.png */; };
+		B49EF6422263541400C220B0 /* glitchPicture000.png in Resources */ = {isa = PBXBuildFile; fileRef = B49EF63B2263541400C220B0 /* glitchPicture000.png */; };
+		B49EF6432263541400C220B0 /* glitchPicture001.png in Resources */ = {isa = PBXBuildFile; fileRef = B49EF63C2263541400C220B0 /* glitchPicture001.png */; };
+		B49EF6442263541400C220B0 /* glitchPicture005.png in Resources */ = {isa = PBXBuildFile; fileRef = B49EF63D2263541400C220B0 /* glitchPicture005.png */; };
+		B49EF6452263541400C220B0 /* glitchPicture004.png in Resources */ = {isa = PBXBuildFile; fileRef = B49EF63E2263541400C220B0 /* glitchPicture004.png */; };
+		B49EF64C226372C200C220B0 /* DDMediaEditorManage.m in Sources */ = {isa = PBXBuildFile; fileRef = B49EF64A226372C200C220B0 /* DDMediaEditorManage.m */; };
+		B49EF65D226393D200C220B0 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = B49EF658226393D200C220B0 /* MBProgressHUD.m */; };
+		B49EF66B226399BD00C220B0 /* MovieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B49EF66A226399BD00C220B0 /* MovieViewController.m */; };
+		B4DAAC4D2257257F0094A3B2 /* GLImageMovieUseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4DAAC4C2257257F0094A3B2 /* GLImageMovieUseViewController.m */; };
+		B4DAAC50225726000094A3B2 /* DDAVAssetRenderManage.m in Sources */ = {isa = PBXBuildFile; fileRef = B4DAAC4F225726000094A3B2 /* DDAVAssetRenderManage.m */; };
+		B4DAAC5222573EB90094A3B2 /* 测试视频.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = B4DAAC5122573EB80094A3B2 /* 测试视频.mp4 */; };
+		B4DAAC5B225AF0470094A3B2 /* GPURenderKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B42EC0792252077B00226FA0 /* GPURenderKit.framework */; };
 		B4DEF80022239EAF00809B5E /* libz.1.1.3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B4DEF7FF22239EAF00809B5E /* libz.1.1.3.tbd */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +73,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B42C4F2A225DB9B400CF9B9B /* 6666.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 6666.mp3; sourceTree = "<group>"; };
+		B42C4F48225F3ACF00CF9B9B /* GLImageFilterListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GLImageFilterListViewController.h; sourceTree = "<group>"; };
+		B42C4F49225F3ACF00CF9B9B /* GLImageFilterListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GLImageFilterListViewController.m; sourceTree = "<group>"; };
 		B42EC04F2252039600226FA0 /* GLDouYinEffectViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GLDouYinEffectViewController.h; sourceTree = "<group>"; };
 		B42EC0502252039600226FA0 /* GLDouYinEffectViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GLDouYinEffectViewController.m; sourceTree = "<group>"; };
 		B42EC0522252044900226FA0 /* DouYinEffectTabView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DouYinEffectTabView.h; sourceTree = "<group>"; };
@@ -76,6 +99,35 @@
 		B47A5ED5222127FF006E07A4 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		B47A5ED6222127FF006E07A4 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		B47A5EE0222129E9006E07A4 /* GPURenderMacroHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPURenderMacroHeader.h; sourceTree = "<group>"; };
+		B49EF60A22622D6D00C220B0 /* GLImageFilterShowViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GLImageFilterShowViewController.h; sourceTree = "<group>"; };
+		B49EF60B22622D6D00C220B0 /* GLImageFilterShowViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GLImageFilterShowViewController.m; sourceTree = "<group>"; };
+		B49EF61022622E8300C220B0 /* GLImageFilterEnumType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GLImageFilterEnumType.h; sourceTree = "<group>"; };
+		B49EF62322634BDD00C220B0 /* UIImage+Rotate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Rotate.m"; sourceTree = "<group>"; };
+		B49EF62422634BDD00C220B0 /* GLImagePickerHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLImagePickerHelper.m; sourceTree = "<group>"; };
+		B49EF62522634BDD00C220B0 /* GLSliderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLSliderView.m; sourceTree = "<group>"; };
+		B49EF62622634BDD00C220B0 /* GLImagePickerHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLImagePickerHelper.h; sourceTree = "<group>"; };
+		B49EF62722634BDD00C220B0 /* GLFilterInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLFilterInfoView.h; sourceTree = "<group>"; };
+		B49EF62822634BDD00C220B0 /* UIImage+Rotate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Rotate.h"; sourceTree = "<group>"; };
+		B49EF62922634BDD00C220B0 /* GLFilterInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLFilterInfoView.m; sourceTree = "<group>"; };
+		B49EF62A22634BDD00C220B0 /* GLSliderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLSliderView.h; sourceTree = "<group>"; };
+		B49EF6382263541400C220B0 /* glitchPicture100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glitchPicture100.png; sourceTree = "<group>"; };
+		B49EF6392263541400C220B0 /* glitchPicture003.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glitchPicture003.png; sourceTree = "<group>"; };
+		B49EF63A2263541400C220B0 /* glitchPicture002.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glitchPicture002.png; sourceTree = "<group>"; };
+		B49EF63B2263541400C220B0 /* glitchPicture000.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glitchPicture000.png; sourceTree = "<group>"; };
+		B49EF63C2263541400C220B0 /* glitchPicture001.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glitchPicture001.png; sourceTree = "<group>"; };
+		B49EF63D2263541400C220B0 /* glitchPicture005.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glitchPicture005.png; sourceTree = "<group>"; };
+		B49EF63E2263541400C220B0 /* glitchPicture004.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glitchPicture004.png; sourceTree = "<group>"; };
+		B49EF64A226372C200C220B0 /* DDMediaEditorManage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDMediaEditorManage.m; sourceTree = "<group>"; };
+		B49EF64B226372C200C220B0 /* DDMediaEditorManage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDMediaEditorManage.h; sourceTree = "<group>"; };
+		B49EF658226393D200C220B0 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		B49EF65B226393D200C220B0 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		B49EF669226399BD00C220B0 /* MovieViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MovieViewController.h; sourceTree = "<group>"; };
+		B49EF66A226399BD00C220B0 /* MovieViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieViewController.m; sourceTree = "<group>"; };
+		B4DAAC4B2257257F0094A3B2 /* GLImageMovieUseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GLImageMovieUseViewController.h; sourceTree = "<group>"; };
+		B4DAAC4C2257257F0094A3B2 /* GLImageMovieUseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GLImageMovieUseViewController.m; sourceTree = "<group>"; };
+		B4DAAC4E225726000094A3B2 /* DDAVAssetRenderManage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDAVAssetRenderManage.h; sourceTree = "<group>"; };
+		B4DAAC4F225726000094A3B2 /* DDAVAssetRenderManage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDAVAssetRenderManage.m; sourceTree = "<group>"; };
+		B4DAAC5122573EB80094A3B2 /* 测试视频.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "测试视频.mp4"; sourceTree = "<group>"; };
 		B4DEF7FF22239EAF00809B5E /* libz.1.1.3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.1.3.tbd; path = usr/lib/libz.1.1.3.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -84,7 +136,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B42EC093225219C600226FA0 /* GPURenderKit.framework in Frameworks */,
+				B4DAAC5B225AF0470094A3B2 /* GPURenderKit.framework in Frameworks */,
 				B4DEF80022239EAF00809B5E /* libz.1.1.3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -106,9 +158,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B42C4F47225F3A7000CF9B9B /* GLImageFilterList */ = {
+			isa = PBXGroup;
+			children = (
+				B42C4F48225F3ACF00CF9B9B /* GLImageFilterListViewController.h */,
+				B42C4F49225F3ACF00CF9B9B /* GLImageFilterListViewController.m */,
+				B49EF60A22622D6D00C220B0 /* GLImageFilterShowViewController.h */,
+				B49EF60B22622D6D00C220B0 /* GLImageFilterShowViewController.m */,
+			);
+			path = GLImageFilterList;
+			sourceTree = "<group>";
+		};
 		B42EC04E2252033700226FA0 /* DouYinEffect */ = {
 			isa = PBXGroup;
 			children = (
+				B49EF6372263541400C220B0 /* GlitchPicture */,
 				B42EC04F2252039600226FA0 /* GLDouYinEffectViewController.h */,
 				B42EC0502252039600226FA0 /* GLDouYinEffectViewController.m */,
 				B42EC0522252044900226FA0 /* DouYinEffectTabView.h */,
@@ -151,10 +215,15 @@
 		B4620D652220413400EE2876 /* GPURenderKitDemo */ = {
 			isa = PBXGroup;
 			children = (
+				B49EF6462263723500C220B0 /* Tool */,
+				B49EF61422634BBE00C220B0 /* Support */,
+				B42C4F47225F3A7000CF9B9B /* GLImageFilterList */,
+				B4DAAC3F2257243D0094A3B2 /* GLImageMovie */,
 				B42EC04E2252033700226FA0 /* DouYinEffect */,
 				B4620D662220413400EE2876 /* AppDelegate.h */,
 				B4620D672220413400EE2876 /* AppDelegate.m */,
 				B47A5EE0222129E9006E07A4 /* GPURenderMacroHeader.h */,
+				B49EF61022622E8300C220B0 /* GLImageFilterEnumType.h */,
 				B47A5ED5222127FF006E07A4 /* MainViewController.h */,
 				B47A5ED6222127FF006E07A4 /* MainViewController.m */,
 				B47A5ED2222127EE006E07A4 /* BaseViewController.h */,
@@ -191,6 +260,69 @@
 				B4DEF7FF22239EAF00809B5E /* libz.1.1.3.tbd */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B49EF61422634BBE00C220B0 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				B49EF64E2263939C00C220B0 /* HUD */,
+				B49EF62722634BDD00C220B0 /* GLFilterInfoView.h */,
+				B49EF62922634BDD00C220B0 /* GLFilterInfoView.m */,
+				B49EF62622634BDD00C220B0 /* GLImagePickerHelper.h */,
+				B49EF62422634BDD00C220B0 /* GLImagePickerHelper.m */,
+				B49EF62A22634BDD00C220B0 /* GLSliderView.h */,
+				B49EF62522634BDD00C220B0 /* GLSliderView.m */,
+				B49EF62822634BDD00C220B0 /* UIImage+Rotate.h */,
+				B49EF62322634BDD00C220B0 /* UIImage+Rotate.m */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		B49EF6372263541400C220B0 /* GlitchPicture */ = {
+			isa = PBXGroup;
+			children = (
+				B49EF6382263541400C220B0 /* glitchPicture100.png */,
+				B49EF6392263541400C220B0 /* glitchPicture003.png */,
+				B49EF63A2263541400C220B0 /* glitchPicture002.png */,
+				B49EF63B2263541400C220B0 /* glitchPicture000.png */,
+				B49EF63C2263541400C220B0 /* glitchPicture001.png */,
+				B49EF63D2263541400C220B0 /* glitchPicture005.png */,
+				B49EF63E2263541400C220B0 /* glitchPicture004.png */,
+			);
+			path = GlitchPicture;
+			sourceTree = "<group>";
+		};
+		B49EF6462263723500C220B0 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				B49EF64B226372C200C220B0 /* DDMediaEditorManage.h */,
+				B49EF64A226372C200C220B0 /* DDMediaEditorManage.m */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		B49EF64E2263939C00C220B0 /* HUD */ = {
+			isa = PBXGroup;
+			children = (
+				B49EF65B226393D200C220B0 /* MBProgressHUD.h */,
+				B49EF658226393D200C220B0 /* MBProgressHUD.m */,
+			);
+			path = HUD;
+			sourceTree = "<group>";
+		};
+		B4DAAC3F2257243D0094A3B2 /* GLImageMovie */ = {
+			isa = PBXGroup;
+			children = (
+				B4DAAC4B2257257F0094A3B2 /* GLImageMovieUseViewController.h */,
+				B4DAAC4C2257257F0094A3B2 /* GLImageMovieUseViewController.m */,
+				B4DAAC4E225726000094A3B2 /* DDAVAssetRenderManage.h */,
+				B4DAAC4F225726000094A3B2 /* DDAVAssetRenderManage.m */,
+				B42C4F2A225DB9B400CF9B9B /* 6666.mp3 */,
+				B4DAAC5122573EB80094A3B2 /* 测试视频.mp4 */,
+				B49EF669226399BD00C220B0 /* MovieViewController.h */,
+				B49EF66A226399BD00C220B0 /* MovieViewController.m */,
+			);
+			path = GLImageMovie;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,6 +392,11 @@
 				TargetAttributes = {
 					B4620D622220413400EE2876 = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					B4620D7A2220413500EE2876 = {
 						CreatedOnToolsVersion = 10.1;
@@ -320,7 +457,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4620D732220413500EE2876 /* LaunchScreen.storyboard in Resources */,
+				B49EF6432263541400C220B0 /* glitchPicture001.png in Resources */,
+				B49EF6402263541400C220B0 /* glitchPicture003.png in Resources */,
+				B49EF6442263541400C220B0 /* glitchPicture005.png in Resources */,
 				B4620D702220413500EE2876 /* Assets.xcassets in Resources */,
+				B49EF6412263541400C220B0 /* glitchPicture002.png in Resources */,
+				B49EF6452263541400C220B0 /* glitchPicture004.png in Resources */,
+				B42C4F2D225DB9B400CF9B9B /* 6666.mp3 in Resources */,
+				B49EF63F2263541400C220B0 /* glitchPicture100.png in Resources */,
+				B49EF6422263541400C220B0 /* glitchPicture000.png in Resources */,
+				B4DAAC5222573EB90094A3B2 /* 测试视频.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,12 +491,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B49EF60C22622D6D00C220B0 /* GLImageFilterShowViewController.m in Sources */,
+				B49EF62D22634BDD00C220B0 /* GLSliderView.m in Sources */,
 				B4620D762220413500EE2876 /* main.m in Sources */,
+				B4DAAC50225726000094A3B2 /* DDAVAssetRenderManage.m in Sources */,
+				B49EF66B226399BD00C220B0 /* MovieViewController.m in Sources */,
 				B47A5ED4222127EE006E07A4 /* BaseViewController.m in Sources */,
+				B49EF62C22634BDD00C220B0 /* GLImagePickerHelper.m in Sources */,
 				B4620D682220413400EE2876 /* AppDelegate.m in Sources */,
+				B42C4F4A225F3ACF00CF9B9B /* GLImageFilterListViewController.m in Sources */,
 				B42EC0542252044900226FA0 /* DouYinEffectTabView.m in Sources */,
+				B4DAAC4D2257257F0094A3B2 /* GLImageMovieUseViewController.m in Sources */,
 				B47A5ED7222127FF006E07A4 /* MainViewController.m in Sources */,
+				B49EF62E22634BDD00C220B0 /* GLFilterInfoView.m in Sources */,
+				B49EF62B22634BDD00C220B0 /* UIImage+Rotate.m in Sources */,
+				B49EF64C226372C200C220B0 /* DDMediaEditorManage.m in Sources */,
 				B42EC0512252039600226FA0 /* GLDouYinEffectViewController.m in Sources */,
+				B49EF65D226393D200C220B0 /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

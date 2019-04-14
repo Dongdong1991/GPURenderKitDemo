@@ -20,6 +20,20 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>我们需要您的相机来拍照、录制视频等功能</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>我们需要您的麦克风来录制视频</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string></string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>我们需要您的相册给好友分享照片、视频等功能</string>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>audio</string>
+	</array>
+	<key>UIFileSharingEnabled</key>
+	<true/>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIRequiredDeviceCapabilities</key>
@@ -37,15 +51,5 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>NSCameraUsageDescription</key>
-	<string>我们需要您的相机来拍照、录制视频等功能</string>
-	<key>NSMicrophoneUsageDescription</key>
-	<string>我们需要您的麦克风来录制视频</string>
-	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string></string>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>我们需要您的相册给好友分享照片、视频等功能</string>
-	<key>UIFileSharingEnabled</key>
-	<true/>
 </dict>
 </plist>

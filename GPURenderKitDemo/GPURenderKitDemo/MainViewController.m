@@ -12,6 +12,11 @@ typedef NS_ENUM(NSInteger,ActionType)
 {
     /** 抖音效果 */
     ActionType_DouYinEffect,
+    /** GPUimage+背景音乐一步合成 */
+    ActionType_GLImageMovieUse,
+    /** GLImageFilter */
+    ActionType_FilterList,
+
 };
 
 
@@ -33,9 +38,11 @@ typedef NS_ENUM(NSInteger,ActionType)
 - (NSArray *)dataSource
 {
     if (!_dataSource) {
-        NSDictionary *dic6 = [self actionDic:@"抖音效果" type:ActionType_DouYinEffect viewcontrollerName:@"GLDouYinEffectViewController"];
+        NSDictionary *dic1 = [self actionDic:@"抖音效果" type:ActionType_DouYinEffect viewcontrollerName:@"GLDouYinEffectViewController"];
+        NSDictionary *dic2 = [self actionDic:@"GLImageMovie用法" type:ActionType_GLImageMovieUse viewcontrollerName:@"GLImageMovieUseViewController"];
+        NSDictionary *dic3 = [self actionDic:@"FilterShow" type:ActionType_FilterList viewcontrollerName:@"GLImageFilterListViewController"];
 
-        _dataSource = @[dic6];
+        _dataSource = @[dic1,dic2,dic3];
         
     }
     return _dataSource;

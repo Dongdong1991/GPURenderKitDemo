@@ -15,8 +15,14 @@
 @property (nonatomic, strong) GPUImageView *preview;
 @property (nonatomic, strong) GLImageThreePartitionGroupFilter *partitionFilter;
 @property (nonatomic, strong) GLImageFourPointsMirrorFilter *pointsMirrorFiter;
+@property (nonatomic, strong) GLImageGlitchEffectGridFilter *glitchEffectGridFilter;
+@property (nonatomic, strong) GLImageGlitchEffectLineFilter *glitchEffectLineFilter;
 @property (nonatomic, strong) DouYinEffectTabView *douYinEffectTabView;
 @property (nonatomic, strong) GPUImageOutput<GPUImageInput> *outPutFilter;
+
+@property (nonatomic, assign) DouYinEffectType selectEffectType;
+@property (nonatomic, strong) CADisplayLink *displayLink;
+
 
 @end
 
@@ -39,8 +45,12 @@
     
     
     [self douYinEffectTabView];
+}
+
+- (void)viewWillDisappear:(BOOL)animated{
     
-    
+    [super viewWillDisappear:animated];
+    [self stopDisplayLink];
 }
 
 - (GPUImageVideoCamera *)videoCamera
@@ -48,7 +58,7 @@
     if (!_videoCamera)
     {
         _videoCamera = [[GPUImageVideoCamera alloc] init];
-        _videoCamera.runBenchmark = YES;
+        _videoCamera.runBenchmark = NO;
         _videoCamera.horizontallyMirrorFrontFacingCamera = YES;
         _videoCamera.outputImageOrientation = UIInterfaceOrientationPortrait;
         [_videoCamera startCameraCapture];
@@ -61,12 +71,10 @@
 - (GLImageThreePartitionGroupFilter *)partitionFilter
 {
     if (!_partitionFilter) {
-        
         _partitionFilter = [[GLImageThreePartitionGroupFilter alloc]init];
         [_partitionFilter setTopLutImg:[UIImage imageNamed:@"xiatian"]];
         [_partitionFilter setMidLutImg:[UIImage imageNamed:@"meishi"]];
         [_partitionFilter setBottomLutImg:[UIImage imageNamed:@"heibai"]];
-
     }
     return _partitionFilter;
 }
@@ -74,12 +82,26 @@
 - (GLImageFourPointsMirrorFilter *)pointsMirrorFiter
 {
     if (!_pointsMirrorFiter) {
-        
         _pointsMirrorFiter = [[GLImageFourPointsMirrorFilter alloc]init];
-        
     }
     return _pointsMirrorFiter;
 }
+
+- (GLImageGlitchEffectLineFilter *)glitchEffectLineFilter{
+    if (!_glitchEffectLineFilter) {
+        _glitchEffectLineFilter = [[GLImageGlitchEffectLineFilter alloc]init];
+    }
+    return _glitchEffectLineFilter;
+}
+
+- (GLImageGlitchEffectGridFilter *)glitchEffectGridFilter{
+    if (!_glitchEffectGridFilter) {
+        _glitchEffectGridFilter = [[GLImageGlitchEffectGridFilter alloc]init];
+        [_glitchEffectGridFilter setPlaidImage:[UIImage imageNamed:@"glitchPicture000.png"]];
+    }
+    return _glitchEffectGridFilter;
+}
+
 
 
 - (DouYinEffectTabView *)douYinEffectTabView
@@ -95,7 +117,41 @@
     
 }
 
+- (void)startDisplayLinkFrameInterval:(NSInteger)frameInterval{
+    self.displayLink = nil;
+    self.displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(handleDisplayLink:)];
+    [self.displayLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
+    self.displayLink.frameInterval = frameInterval;
+}
+- (void)handleDisplayLink:(CADisplayLink*)displayLink
+{
+    switch (self.selectEffectType) {
+        case DouYinEffectType_GLImageGlitchEffectLineFilter:
+            {
+                self.glitchEffectLineFilter.intensity = arc4random()%100/100.0;
+            }
+            break;
+        case DouYinEffectType_GLImageGlitchEffectGridFilter:
+        {
+            self.glitchEffectGridFilter.intensity = arc4random()%100/100.0;
+            int index = arc4random()%6;
+            UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"glitchPicture00%d.png",index]];
+            [self.glitchEffectGridFilter setPlaidImage:image];
+        }
+            break;
 
+            
+        default:
+            break;
+    }
+}
+
+- (void)stopDisplayLink{
+    
+    [self.displayLink invalidate];
+    self.displayLink.paused = YES;
+    _displayLink = nil;
+}
 
 - (void)dealloc
 {
@@ -106,6 +162,8 @@
 
 - (void)didSelectEffectType:(DouYinEffectType)type{
     
+    self.selectEffectType = type;
+    [self stopDisplayLink];
     [self.outPutFilter removeTarget:self.preview];
     
     switch (type) {
@@ -119,17 +177,28 @@
             self.outPutFilter = self.pointsMirrorFiter;
         }
             break;
-            
-            
+        case DouYinEffectType_GLImageGlitchEffectLineFilter:
+        {
+            self.outPutFilter = self.glitchEffectLineFilter;
+            [self startDisplayLinkFrameInterval:2];
+        }
+            break;
+        case DouYinEffectType_GLImageGlitchEffectGridFilter:
+        {
+            self.outPutFilter = self.glitchEffectGridFilter;
+            [self startDisplayLinkFrameInterval:30];
+        }
+            break;
         default:
             break;
     }
     
     [self.outPutFilter addTarget:self.preview];
     [self.videoCamera addTarget:self.outPutFilter];
-
-    
 }
+
+
+
 
 
 @end

@@ -184,14 +184,20 @@
 #import "GLImageBlendFilter.h" // This is the base class
 #import "GLImageMixBlendFilter.h"
 #import "GPUImageGaussianBlurFilter.h"
-#import "GLImageMovieWriter.h"
 
 
 //抖音
 #import "GLImageThreePartitionFilter.h"
 #import "GLImageThreePartitionGroupFilter.h"
 #import "GLImageFourPointsMirrorFilter.h"
+#import "GLImageGlitchEffectGridFilter.h"
+#import "GLImageGlitchEffectLineFilter.h"
 
 
 //Face
 #import "GPUImageBeautifyFilter.h"
+
+//GLImageMovie
+#import "GLImageMovie.h"
+#import "GPUImageMovieWriterFix.h"
+
