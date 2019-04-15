@@ -87,7 +87,17 @@
                 self.filter = lutFilter;
             }
             break;
-            
+        case GL_IMAGE_ADDSTICKER:
+        {
+            GLImageAddStickerFilter *lutFilter = [[GLImageAddStickerFilter alloc]init];
+            [lutFilter setStickerImage:[UIImage imageNamed:@"bunny"]];
+            lutFilter.center = CGPointMake(0.5, 0.5);
+            lutFilter.theta = 0.0;
+            lutFilter.size = CGSizeMake(0.25, 0.25);
+            self.filter = lutFilter;
+        }
+            break;
+
             
             
         default:
@@ -173,7 +183,7 @@
         }
         else
         {
-            _picture = [[GPUImagePicture alloc] initWithImage:[UIImage imageNamed:@"bunny"]];
+            _picture = [[GPUImagePicture alloc] initWithImage:[UIImage imageNamed:@"flower"]];
         }
     }
     

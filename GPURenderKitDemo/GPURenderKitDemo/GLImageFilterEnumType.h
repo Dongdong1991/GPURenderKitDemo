@@ -16,6 +16,7 @@
 typedef NS_ENUM(NSInteger, GLIMAGE_FILTER_TYPE)
 {
     GLIMAGE_LUT,
+    GL_IMAGE_ADDSTICKER,
     GLIMAGE_NUMBEROFFILTER,
 };
 
@@ -25,6 +26,7 @@ static inline NSString *GetFilterNameWithType(GLIMAGE_FILTER_TYPE type)
     switch (type)
     {
         case GLIMAGE_LUT: text = @"Lookup Table （lut图）"; break;
+        case GL_IMAGE_ADDSTICKER: text = @"贴纸,水印"; break;
         default: break;
     }
     
