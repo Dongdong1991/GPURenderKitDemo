@@ -16,6 +16,11 @@ typedef NS_ENUM(NSInteger,ActionType)
     ActionType_GLImageMovieUse,
     /** GLImageFilter */
     ActionType_FilterList,
+    /** Face */
+    ActionType_Face_Fragment,
+    /** 未实现 */
+    ActionType_Empty,
+
 
 };
 
@@ -41,8 +46,10 @@ typedef NS_ENUM(NSInteger,ActionType)
         NSDictionary *dic1 = [self actionDic:@"抖音效果" type:ActionType_DouYinEffect viewcontrollerName:@"GLDouYinEffectViewController"];
         NSDictionary *dic2 = [self actionDic:@"GLImageMovie用法" type:ActionType_GLImageMovieUse viewcontrollerName:@"GLImageMovieUseViewController"];
         NSDictionary *dic3 = [self actionDic:@"FilterShow" type:ActionType_FilterList viewcontrollerName:@"GLImageFilterListViewController"];
+        NSDictionary *dic4 = [self actionDic:@"美颜,瘦脸,大眼（基于FragmentShader调节--已实现）" type:ActionType_Face_Fragment viewcontrollerName:@"FaceViewController"];
+        NSDictionary *dic5 = [self actionDic:@"美颜,瘦脸,大眼（基于VertexShader调节--未实现）" type:ActionType_Empty viewcontrollerName:@""];
 
-        _dataSource = @[dic1,dic2,dic3];
+        _dataSource = @[dic1,dic2,dic3,dic4,dic5];
         
     }
     return _dataSource;
@@ -87,6 +94,7 @@ typedef NS_ENUM(NSInteger,ActionType)
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellid];
     if (!cell) {
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellid];
+        cell.textLabel.font = [UIFont systemFontOfSize:12];
     }
     
     NSDictionary *dic = self.dataSource[indexPath.row];
@@ -97,8 +105,13 @@ typedef NS_ENUM(NSInteger,ActionType)
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSDictionary *dic = self.dataSource[indexPath.row];
-    [self.navigationController pushViewController:[self createClassName:dic[@"vcName"]] animated:YES];
     
+    ActionType type = [dic[@"type"] integerValue];
+    if (type == ActionType_Empty) {
+        NSLog(@"未实现---");
+        return;
+    }
+    [self.navigationController pushViewController:[self createClassName:dic[@"vcName"]] animated:YES];
 }
 
 - (UIViewController *)createClassName:(NSString *)classString

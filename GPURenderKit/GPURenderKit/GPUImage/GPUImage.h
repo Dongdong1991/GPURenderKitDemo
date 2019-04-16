@@ -196,6 +196,8 @@
 
 //Face
 #import "GPUImageBeautifyFilter.h"
+#import "GLImageFaceChangeFilter.h"
+
 
 //GLImageMovie
 #import "GLImageMovie.h"
