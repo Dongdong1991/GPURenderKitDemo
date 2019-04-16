@@ -192,7 +192,7 @@
 #import "GLImageFourPointsMirrorFilter.h"
 #import "GLImageGlitchEffectGridFilter.h"
 #import "GLImageGlitchEffectLineFilter.h"
-
+#import "GLImageSoulOutFilter.h"
 
 //Face
 #import "GPUImageBeautifyFilter.h"

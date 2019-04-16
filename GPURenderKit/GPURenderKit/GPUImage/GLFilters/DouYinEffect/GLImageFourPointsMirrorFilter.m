@@ -39,8 +39,6 @@ NSString *const kGLImagePointsMirrorFragmentShaderString = SHADER_STRING
 
 
 
-
-
 @implementation GLImageFourPointsMirrorFilter
 
 

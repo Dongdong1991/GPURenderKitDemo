@@ -391,6 +391,8 @@
 		B49EF6362263521C00C220B0 /* GLImageGlitchEffectLineFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = B49EF6322263521C00C220B0 /* GLImageGlitchEffectLineFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B4A9FE892265CFDA00BC6E51 /* GLImageFaceChangeFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = B4A9FE872265CFDA00BC6E51 /* GLImageFaceChangeFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B4A9FE8A2265CFDA00BC6E51 /* GLImageFaceChangeFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A9FE882265CFDA00BC6E51 /* GLImageFaceChangeFilter.m */; };
+		B4A9FE992266409F00BC6E51 /* GLImageSoulOutFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A9FE972266409F00BC6E51 /* GLImageSoulOutFilter.m */; };
+		B4A9FE9A2266409F00BC6E51 /* GLImageSoulOutFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = B4A9FE982266409F00BC6E51 /* GLImageSoulOutFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B4DAAC47225724AB0094A3B2 /* GLImageMovie.m in Sources */ = {isa = PBXBuildFile; fileRef = B4DAAC43225724AB0094A3B2 /* GLImageMovie.m */; };
 		B4DAAC48225724AB0094A3B2 /* GPUImageMovieWriterFix.m in Sources */ = {isa = PBXBuildFile; fileRef = B4DAAC44225724AB0094A3B2 /* GPUImageMovieWriterFix.m */; };
 		B4DAAC49225724AB0094A3B2 /* GLImageMovie.h in Headers */ = {isa = PBXBuildFile; fileRef = B4DAAC45225724AB0094A3B2 /* GLImageMovie.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -796,6 +798,8 @@
 		B49EF6322263521C00C220B0 /* GLImageGlitchEffectLineFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLImageGlitchEffectLineFilter.h; sourceTree = "<group>"; };
 		B4A9FE872265CFDA00BC6E51 /* GLImageFaceChangeFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLImageFaceChangeFilter.h; sourceTree = "<group>"; };
 		B4A9FE882265CFDA00BC6E51 /* GLImageFaceChangeFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLImageFaceChangeFilter.m; sourceTree = "<group>"; };
+		B4A9FE972266409F00BC6E51 /* GLImageSoulOutFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLImageSoulOutFilter.m; sourceTree = "<group>"; };
+		B4A9FE982266409F00BC6E51 /* GLImageSoulOutFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLImageSoulOutFilter.h; sourceTree = "<group>"; };
 		B4DAAC43225724AB0094A3B2 /* GLImageMovie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLImageMovie.m; sourceTree = "<group>"; };
 		B4DAAC44225724AB0094A3B2 /* GPUImageMovieWriterFix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPUImageMovieWriterFix.m; sourceTree = "<group>"; };
 		B4DAAC45225724AB0094A3B2 /* GLImageMovie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLImageMovie.h; sourceTree = "<group>"; };
@@ -834,6 +838,8 @@
 				B49EF62F2263521C00C220B0 /* GLImageGlitchEffectGridFilter.m */,
 				B49EF6322263521C00C220B0 /* GLImageGlitchEffectLineFilter.h */,
 				B49EF6302263521C00C220B0 /* GLImageGlitchEffectLineFilter.m */,
+				B4A9FE982266409F00BC6E51 /* GLImageSoulOutFilter.h */,
+				B4A9FE972266409F00BC6E51 /* GLImageSoulOutFilter.m */,
 			);
 			path = DouYinEffect;
 			sourceTree = "<group>";
@@ -1330,6 +1336,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4A9FE9A2266409F00BC6E51 /* GLImageSoulOutFilter.h in Headers */,
 				B4A9FE892265CFDA00BC6E51 /* GLImageFaceChangeFilter.h in Headers */,
 				B49EF6352263521C00C220B0 /* GLImageGlitchEffectGridFilter.h in Headers */,
 				B49EF6362263521C00C220B0 /* GLImageGlitchEffectLineFilter.h in Headers */,
@@ -1664,6 +1671,7 @@
 				B4621638222046DF00EE2876 /* GPUImageFourInputFilter.m in Sources */,
 				B4621617222046DF00EE2876 /* GPUImageTwoPassFilter.m in Sources */,
 				B462181C2220479F00EE2876 /* GPUImageDissolveBlendFilter.m in Sources */,
+				B4A9FE992266409F00BC6E51 /* GLImageSoulOutFilter.m in Sources */,
 				B4621630222046DF00EE2876 /* GPUImageBuffer.m in Sources */,
 				B462133D2220436300EE2876 /* GPUImagePicture.m in Sources */,
 				B4DAAC48225724AB0094A3B2 /* GPUImageMovieWriterFix.m in Sources */,

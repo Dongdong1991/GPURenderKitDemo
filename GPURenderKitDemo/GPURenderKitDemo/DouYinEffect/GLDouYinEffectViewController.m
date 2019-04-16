@@ -17,6 +17,8 @@
 @property (nonatomic, strong) GLImageFourPointsMirrorFilter *pointsMirrorFiter;
 @property (nonatomic, strong) GLImageGlitchEffectGridFilter *glitchEffectGridFilter;
 @property (nonatomic, strong) GLImageGlitchEffectLineFilter *glitchEffectLineFilter;
+@property (nonatomic, strong) GLImageSoulOutFilter *soulOutFilter;
+
 @property (nonatomic, strong) DouYinEffectTabView *douYinEffectTabView;
 @property (nonatomic, strong) GPUImageOutput<GPUImageInput> *outPutFilter;
 
@@ -35,14 +37,17 @@
     self.view.backgroundColor = [UIColor whiteColor];
     self.preview = [[GPUImageView alloc] initWithFrame:self.view.bounds];
     self.preview.layer.contentsScale = 2.0;
-    self.preview.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.8];
-    [self.preview setBackgroundColorRed:0.2 green:0.2 blue:0.2 alpha:1.0];
+    self.preview.backgroundColor = [UIColor blackColor];
+    [self.preview setBackgroundColorRed:0.0 green:0.0 blue:0.0 alpha:1.0];
     [self.view addSubview:self.preview];
     
     self.outPutFilter = self.partitionFilter;
     [self.outPutFilter addTarget:self.preview];
     [self.videoCamera addTarget:self.partitionFilter];
-    
+
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self.videoCamera startCameraCapture];
+    });
     
     [self douYinEffectTabView];
 }
@@ -57,12 +62,10 @@
 {
     if (!_videoCamera)
     {
-        _videoCamera = [[GPUImageVideoCamera alloc] init];
+        _videoCamera = [[GPUImageVideoCamera alloc] initWithSessionPreset:AVCaptureSessionPreset1280x720 cameraPosition:AVCaptureDevicePositionFront];
         _videoCamera.runBenchmark = NO;
         _videoCamera.horizontallyMirrorFrontFacingCamera = YES;
         _videoCamera.outputImageOrientation = UIInterfaceOrientationPortrait;
-        [_videoCamera startCameraCapture];
-        [_videoCamera rotateCamera];
     }
     
     return _videoCamera;
@@ -102,6 +105,12 @@
     return _glitchEffectGridFilter;
 }
 
+- (GLImageSoulOutFilter *)soulOutFilter{
+    if (!_soulOutFilter) {
+        _soulOutFilter = [[GLImageSoulOutFilter alloc]init];
+    }
+    return _soulOutFilter;
+}
 
 
 - (DouYinEffectTabView *)douYinEffectTabView
@@ -127,9 +136,9 @@
 {
     switch (self.selectEffectType) {
         case DouYinEffectType_GLImageGlitchEffectLineFilter:
-            {
-                self.glitchEffectLineFilter.intensity = arc4random()%100/100.0;
-            }
+        {
+            self.glitchEffectLineFilter.intensity = arc4random()%100/100.0;
+        }
             break;
         case DouYinEffectType_GLImageGlitchEffectGridFilter:
         {
@@ -139,10 +148,16 @@
             [self.glitchEffectGridFilter setPlaidImage:image];
         }
             break;
-
+            
             
         default:
             break;
+        case DouYinEffectType_GLImageSoulOutFilter:
+        {
+            //            self.soulOutFilter.intensity = arc4random()%100/100.0;
+        }
+            break;
+            
     }
 }
 
@@ -189,6 +204,13 @@
             [self startDisplayLinkFrameInterval:30];
         }
             break;
+        case DouYinEffectType_GLImageSoulOutFilter:
+        {
+            self.outPutFilter = self.soulOutFilter;
+            [self startDisplayLinkFrameInterval:30];
+        }
+            break;
+            
         default:
             break;
     }

@@ -16,12 +16,13 @@ typedef NS_ENUM(NSInteger,DouYinEffectType)
     /** 抖音三屏带滤镜 */
     DouYinEffectType_GLImageThreePartition = 0,
     /** 抖音四分镜 */
-    DouYinEffectType_GLImageFourPointsMirrorFilter = 1,
+    DouYinEffectType_GLImageFourPointsMirrorFilter,
     /** 毛刺 */
     DouYinEffectType_GLImageGlitchEffectLineFilter,
     /** 格子故障 */
     DouYinEffectType_GLImageGlitchEffectGridFilter,
-
+    /** 灵魂出窍 */
+    DouYinEffectType_GLImageSoulOutFilter,
 };
 
 

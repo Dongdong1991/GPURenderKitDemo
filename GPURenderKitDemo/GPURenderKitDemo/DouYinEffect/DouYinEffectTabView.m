@@ -52,11 +52,13 @@ static const NSString *kEffectType = @"effectType";
     NSDictionary *dic2 = [self createDicEffectName:@"四屏" effectType:DouYinEffectType_GLImageFourPointsMirrorFilter];
     NSDictionary *dic3 = [self createDicEffectName:@"电流" effectType:DouYinEffectType_GLImageGlitchEffectLineFilter];
     NSDictionary *dic4 = [self createDicEffectName:@"格子故障" effectType:DouYinEffectType_GLImageGlitchEffectGridFilter];
-    
+    NSDictionary *dic5 = [self createDicEffectName:@"灵魂出窍" effectType:DouYinEffectType_GLImageSoulOutFilter];
+
     [self.tabViewData addObject:dic1];
     [self.tabViewData addObject:dic2];
     [self.tabViewData addObject:dic3];
     [self.tabViewData addObject:dic4];
+    [self.tabViewData addObject:dic5];
 
 
 }
