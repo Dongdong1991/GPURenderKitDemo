@@ -193,6 +193,8 @@
 #import "GLImageGlitchEffectGridFilter.h"
 #import "GLImageGlitchEffectLineFilter.h"
 #import "GLImageSoulOutFilter.h"
+#import "GLImageZoomFilter.h"
+#import "GLImageWaterReflectionFilter.h"
 
 //Face
 #import "GPUImageBeautifyFilter.h"

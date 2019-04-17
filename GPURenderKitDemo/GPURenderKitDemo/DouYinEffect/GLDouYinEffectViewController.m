@@ -18,6 +18,9 @@
 @property (nonatomic, strong) GLImageGlitchEffectGridFilter *glitchEffectGridFilter;
 @property (nonatomic, strong) GLImageGlitchEffectLineFilter *glitchEffectLineFilter;
 @property (nonatomic, strong) GLImageSoulOutFilter *soulOutFilter;
+@property (nonatomic, strong) GLImageZoomFilter *zoomFilter;
+@property (nonatomic, strong) GLImageWaterReflectionFilter *waterReflectionFilter;
+
 
 @property (nonatomic, strong) DouYinEffectTabView *douYinEffectTabView;
 @property (nonatomic, strong) GPUImageOutput<GPUImageInput> *outPutFilter;
@@ -112,6 +115,22 @@
     return _soulOutFilter;
 }
 
+- (GLImageZoomFilter *)zoomFilter{
+    if (!_zoomFilter) {
+        
+        _zoomFilter = [[GLImageZoomFilter alloc]init];
+    }
+    return _zoomFilter;
+}
+
+- (GLImageWaterReflectionFilter *)waterReflectionFilter{
+  
+    if (!_waterReflectionFilter) {
+        
+        _waterReflectionFilter = [[GLImageWaterReflectionFilter alloc]init];
+    }
+    return _waterReflectionFilter;
+}
 
 - (DouYinEffectTabView *)douYinEffectTabView
 {
@@ -151,11 +170,6 @@
             
             
         default:
-            break;
-        case DouYinEffectType_GLImageSoulOutFilter:
-        {
-            //            self.soulOutFilter.intensity = arc4random()%100/100.0;
-        }
             break;
             
     }
@@ -207,7 +221,16 @@
         case DouYinEffectType_GLImageSoulOutFilter:
         {
             self.outPutFilter = self.soulOutFilter;
-            [self startDisplayLinkFrameInterval:30];
+        }
+            break;
+        case DouYinEffectType_GLImageZoomFilter:
+        {
+            self.outPutFilter = self.zoomFilter;
+        }
+            break;
+        case DouYinEffectType_GLImageWaterReflectionFilter:
+        {
+            self.outPutFilter = self.waterReflectionFilter;
         }
             break;
             
