@@ -19,7 +19,7 @@
 ###FaceViewController
 美颜，脸部调节实现。目前已经实现
 
-1.美颜。
+1.美颜。[琨君大佬的简书---美颜实现](https://www.jianshu.com/p/945fc806a9b4)
 
 2.大小眼调节。
 
