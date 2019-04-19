@@ -195,6 +195,8 @@
 #import "GLImageSoulOutFilter.h"
 #import "GLImageZoomFilter.h"
 #import "GLImageWaterReflectionFilter.h"
+#import "GLImageBlurSnapViewFilter.h"
+#import "GLImageBlurSnapViewFilterGroup.h"
 
 //Face
 #import "GPUImageBeautifyFilter.h"

@@ -20,7 +20,7 @@
 @property (nonatomic, strong) GLImageSoulOutFilter *soulOutFilter;
 @property (nonatomic, strong) GLImageZoomFilter *zoomFilter;
 @property (nonatomic, strong) GLImageWaterReflectionFilter *waterReflectionFilter;
-
+@property (nonatomic, strong) GLImageBlurSnapViewFilterGroup *blurSnapViewFilter;
 
 @property (nonatomic, strong) DouYinEffectTabView *douYinEffectTabView;
 @property (nonatomic, strong) GPUImageOutput<GPUImageInput> *outPutFilter;
@@ -132,6 +132,15 @@
     return _waterReflectionFilter;
 }
 
+- (GLImageBlurSnapViewFilterGroup *)blurSnapViewFilter{
+    
+    if (!_blurSnapViewFilter) {
+        _blurSnapViewFilter = [[GLImageBlurSnapViewFilterGroup alloc]init];
+    }
+    return _blurSnapViewFilter;
+}
+
+
 - (DouYinEffectTabView *)douYinEffectTabView
 {
     
@@ -233,6 +242,13 @@
             self.outPutFilter = self.waterReflectionFilter;
         }
             break;
+        case DouYinEffectType_GLImageBlurSnapViewFilterGroup:
+        {
+            
+            self.outPutFilter = self.blurSnapViewFilter;
+        }
+            break;
+
             
         default:
             break;

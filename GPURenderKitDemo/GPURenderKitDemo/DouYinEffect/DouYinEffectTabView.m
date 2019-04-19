@@ -55,7 +55,8 @@ static const NSString *kEffectType = @"effectType";
     NSDictionary *dic5 = [self createDicEffectName:@"灵魂出窍" effectType:DouYinEffectType_GLImageSoulOutFilter];
     NSDictionary *dic6 = [self createDicEffectName:@"放大缩小" effectType:DouYinEffectType_GLImageZoomFilter];
     NSDictionary *dic7 = [self createDicEffectName:@"水面倒影" effectType:DouYinEffectType_GLImageWaterReflectionFilter];
-
+    NSDictionary *dic8 = [self createDicEffectName:@"模糊分屏" effectType:DouYinEffectType_GLImageBlurSnapViewFilterGroup];
+    
     [self.tabViewData addObject:dic1];
     [self.tabViewData addObject:dic2];
     [self.tabViewData addObject:dic3];
@@ -63,6 +64,7 @@ static const NSString *kEffectType = @"effectType";
     [self.tabViewData addObject:dic5];
     [self.tabViewData addObject:dic6];
     [self.tabViewData addObject:dic7];
+    [self.tabViewData addObject:dic8];
 
 }
 
