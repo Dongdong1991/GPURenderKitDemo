@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B42A993E226D6E860067297F /* 人脸106个关键点.png in Resources */ = {isa = PBXBuildFile; fileRef = B42A993B226D6E860067297F /* 人脸106个关键点.png */; };
 		B42C4F2D225DB9B400CF9B9B /* 6666.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B42C4F2A225DB9B400CF9B9B /* 6666.mp3 */; };
 		B42C4F4A225F3ACF00CF9B9B /* GLImageFilterListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B42C4F49225F3ACF00CF9B9B /* GLImageFilterListViewController.m */; };
 		B42EC0512252039600226FA0 /* GLDouYinEffectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B42EC0502252039600226FA0 /* GLDouYinEffectViewController.m */; };
@@ -79,6 +80,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B42A993B226D6E860067297F /* 人脸106个关键点.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "人脸106个关键点.png"; sourceTree = "<group>"; };
 		B42C4F2A225DB9B400CF9B9B /* 6666.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 6666.mp3; sourceTree = "<group>"; };
 		B42C4F48225F3ACF00CF9B9B /* GLImageFilterListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GLImageFilterListViewController.h; sourceTree = "<group>"; };
 		B42C4F49225F3ACF00CF9B9B /* GLImageFilterListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GLImageFilterListViewController.m; sourceTree = "<group>"; };
@@ -368,6 +370,7 @@
 		B4DC43CF2264D372009C08A0 /* Face++ */ = {
 			isa = PBXGroup;
 			children = (
+				B42A993B226D6E860067297F /* 人脸106个关键点.png */,
 				B4DC43D02264D372009C08A0 /* MGLicenseManagerHelper */,
 				B4DC43D42264D372009C08A0 /* iOS_SDK */,
 				B4DC43DE2264D372009C08A0 /* MGLicense */,
@@ -545,6 +548,7 @@
 				B4620D732220413500EE2876 /* LaunchScreen.storyboard in Resources */,
 				B49EF6432263541400C220B0 /* glitchPicture001.png in Resources */,
 				B49EF6402263541400C220B0 /* glitchPicture003.png in Resources */,
+				B42A993E226D6E860067297F /* 人脸106个关键点.png in Resources */,
 				B49EF6442263541400C220B0 /* glitchPicture005.png in Resources */,
 				B4620D702220413500EE2876 /* Assets.xcassets in Resources */,
 				B49EF6412263541400C220B0 /* glitchPicture002.png in Resources */,

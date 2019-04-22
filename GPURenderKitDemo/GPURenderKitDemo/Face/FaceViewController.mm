@@ -37,6 +37,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    /**
+     GLImageFaceChangeFilter是人脸微整的效果。是把识别到的106个人脸关键点传到shader里面去。然后做像素的平移变化。
+     你们可以先查看项目里面有一张图片。"人脸106个关键点.png"。结合shader里面用到的点加深理解。
+     */
+    
+    
     @weakify(self);
     [self checkFaceServiceBlock:^(BOOL results) {
         @strongify(self);
