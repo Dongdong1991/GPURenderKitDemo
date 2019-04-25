@@ -15,8 +15,7 @@ NSString *const kGLImageZoomFragmentShaderString = SHADER_STRING
 (
  precision highp float;
  varying vec2 textureCoordinate;
- 
- uniform float bigValue;
+ uniform float scale;//放大缩小的比例值
  
  uniform sampler2D inputImageTexture;
  
@@ -25,22 +24,13 @@ NSString *const kGLImageZoomFragmentShaderString = SHADER_STRING
      
      highp vec2 uv = textureCoordinate;
      
-     vec4 originColor = texture2D(inputImageTexture, uv);
+     //uv坐标的中心点并非是（0.0，0.0），所以这里进行一次偏移，后面在偏移回来就可以了
+     vec2 center = vec2(0.5, 0.5);
+     uv -= center;
+     uv = uv / scale;
+     uv += center;
      
-     
-     float w = bigValue ;
-     float minOffset = (1.0 - w) / 2.0;
-     float maxOffset = 1.0 - minOffset;
-     
-     //中心点放大计算方式
-     if ((uv.x >= minOffset && uv.x <= maxOffset) && (uv.y >= minOffset && uv.y <= maxOffset))
-     {
-         uv = vec2 (uv - vec2(minOffset)) / w;
-         originColor = texture2D(inputImageTexture, uv);
-     }
-     
-     
-     gl_FragColor = originColor;
+     gl_FragColor = texture2D(inputImageTexture, uv);
      
  }
  );
@@ -98,8 +88,8 @@ NSString *const kGLImageZoomFragmentShaderString = SHADER_STRING
 }
 
 
-- (void)updateForegroundTexture:(float)bigValue{
-    [self setFloat:bigValue forUniformName:@"bigValue"];
+- (void)updateForegroundTexture:(float)scale{
+    [self setFloat:scale forUniformName:@"scale"];
 }
 
 

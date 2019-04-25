@@ -65,7 +65,7 @@
 {
     if (!_videoCamera)
     {
-        _videoCamera = [[GPUImageVideoCamera alloc] initWithSessionPreset:AVCaptureSessionPreset1280x720 cameraPosition:AVCaptureDevicePositionFront];
+        _videoCamera = [[GPUImageVideoCamera alloc] initWithSessionPreset:AVCaptureSessionPreset1280x720 cameraPosition:AVCaptureDevicePositionBack];
         _videoCamera.runBenchmark = NO;
         _videoCamera.horizontallyMirrorFrontFacingCamera = YES;
         _videoCamera.outputImageOrientation = UIInterfaceOrientationPortrait;
