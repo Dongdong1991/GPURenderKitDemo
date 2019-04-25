@@ -2,8 +2,11 @@
 基于GPUImage做效果.
 由于最近还没有时间写详细的实现的具体方案。现在只是先把效果功能先做出来。后面会把实现的方案补上陆续补充上去。
 
-![放大缩小](../DDGPUImageLearning_Git/放大缩小.gif)
-![放大缩小](../DDGPUImageLearning_Git/模糊分屏.gif)
+![放大缩小](../DDGPUImageLearning_Git/GifResources/放大缩小.gif)
+
+![放大缩小](../DDGPUImageLearning_Git/GifResources/模糊分屏.gif)
+
+![灵魂出窍](../DDGPUImageLearning_Git/GifResources/灵魂出窍.gif)
 
 
 ###GLDouYinEffectViewController
@@ -17,7 +20,7 @@
 
 4.格子故障。
 
-5.灵魂出窍。
+5.灵魂出窍。[实现思路](https://www.jianshu.com/p/12ec246485a1)
 
 6.放大缩小。[实现思路](https://www.jianshu.com/p/ad6375fa046b)
 

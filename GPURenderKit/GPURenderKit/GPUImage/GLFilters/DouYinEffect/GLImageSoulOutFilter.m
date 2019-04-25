@@ -15,8 +15,7 @@ NSString *const kGLImageSoulOutFragmentShaderString = SHADER_STRING
 (
  precision highp float;
  varying vec2 textureCoordinate;
- 
- uniform float bigValue;
+ uniform float scale;//缩放比
  
  uniform sampler2D inputImageTexture;
  
@@ -24,25 +23,17 @@ NSString *const kGLImageSoulOutFragmentShaderString = SHADER_STRING
  {
      
      highp vec2 uv = textureCoordinate;
-
+     
      vec4 originColor = texture2D(inputImageTexture, uv);
+     //uv坐标的中心点并非是（0.0，0.0），所以这里进行一次偏移，后面在偏移回来就可以了
+     vec2 center = vec2(0.5, 0.5);
+     uv -= center;
+     uv = uv / scale;
+     uv += center;
+     vec4 overlayColor = texture2D(inputImageTexture, uv);
      
-     vec4 overlayColor = originColor;
-     
-     float w = bigValue ;
-     float minOffset = (1.0 - w) / 2.0;
-     float maxOffset = 1.0 - minOffset;
-     
-     //灵魂出窍 中心点放大计算方式
-     if ((uv.x >= minOffset && uv.x <= maxOffset) && (uv.y >= minOffset && uv.y <= maxOffset))
-     {
-         uv = vec2 (uv - vec2(minOffset)) / w;
-         overlayColor = texture2D(inputImageTexture, uv);
-     }
-     
-     vec4 color = mix(originColor,overlayColor,0.2);
-     
-
+     //线性混合
+     vec4 color = mix(originColor,overlayColor,fract(scale)*0.2);
      gl_FragColor = color;
      
  }
@@ -89,15 +80,15 @@ NSString *const kGLImageSoulOutFragmentShaderString = SHADER_STRING
     }else{
         self.resetCount = 0;
     }
-
+    
     //这里是做灵魂出窍的重点计算
     NSInteger value = self.resetCount;
     [self updateForegroundTexture:1.0+(value/100.0)];
 }
 
 
-- (void)updateForegroundTexture:(float)bigValue{
-    [self setFloat:bigValue forUniformName:@"bigValue"];
+- (void)updateForegroundTexture:(float)scale{
+    [self setFloat:scale forUniformName:@"scale"];
 }
 
 
