@@ -6,6 +6,13 @@
 //  Copyright © 2019 刘海东. All rights reserved.
 //
 
+
+/**
+
+ 这里面用到的算法参考文章地址 "http://www.shenyanhao.com/2015/09/眼睛放大美颜算法/"
+ 
+ */
+
 #import "GLImageFaceChangeFilter.h"
 
 #define FACE_POINTS_COUNT 106
@@ -202,6 +209,10 @@ NSString *const kGLImageFaceChangeFragmentShaderString = SHADER_STRING
 }
 
 - (void)setFacePointsArray:(NSArray *)pointArrays{
+    
+    if (pointArrays.count==0) {
+        return;
+    }
     
     static GLfloat facePoints[FACE_POINTS_COUNT * 2] = {0};
     

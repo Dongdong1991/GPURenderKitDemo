@@ -1,21 +1,17 @@
 //
-//  GLImageFaceChangeFilter.h
-//  GPURenderKitDemo
+//  GLImageFaceChangeFilterGroup.h
+//  GPURenderKit
 //
-//  Created by 刘海东 on 2019/4/16.
+//  Created by 刘海东 on 2019/4/26.
 //  Copyright © 2019 刘海东. All rights reserved.
 //
 
+#import <GPURenderKit/GPURenderKit.h>
 
-
-
-#import "GPUImageFilter.h"
 NS_ASSUME_NONNULL_BEGIN
 
-@interface GLImageFaceChangeFilter : GPUImageFilter
-{
-    GLint faceArrayUniform,iResolutionUniform,haveFaceUniform;
-}
+@interface GLImageFaceChangeFilterGroup : GPUImageFilterGroup
+
 
 /** 是否检测到人脸 */
 @property (nonatomic, assign) BOOL isHaveFace;
@@ -23,8 +19,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) float thinFaceParam;
 /** 眼睛调节【-1.0 - 1.0】*/
 @property (nonatomic, assign) float eyeParam;
+/** 人脸检测点显示 默认开启*/
+@property (nonatomic, assign) BOOL isShowFaceDetectPointBool;
 
 - (void)setFacePointsArray:(NSArray *)pointArrays;
+
 
 
 @end

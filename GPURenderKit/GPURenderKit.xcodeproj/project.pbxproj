@@ -399,6 +399,10 @@
 		B4A9FE8A2265CFDA00BC6E51 /* GLImageFaceChangeFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A9FE882265CFDA00BC6E51 /* GLImageFaceChangeFilter.m */; };
 		B4A9FE992266409F00BC6E51 /* GLImageSoulOutFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A9FE972266409F00BC6E51 /* GLImageSoulOutFilter.m */; };
 		B4A9FE9A2266409F00BC6E51 /* GLImageSoulOutFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = B4A9FE982266409F00BC6E51 /* GLImageSoulOutFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B4C64C1D2271FFF9001BB716 /* GLImageFaceDetectPointFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = B4C64C1B2271FFF9001BB716 /* GLImageFaceDetectPointFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B4C64C1E2271FFF9001BB716 /* GLImageFaceDetectPointFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C64C1C2271FFF9001BB716 /* GLImageFaceDetectPointFilter.m */; };
+		B4C64C22227217C2001BB716 /* GLImageFaceChangeFilterGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = B4C64C20227217C2001BB716 /* GLImageFaceChangeFilterGroup.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B4C64C23227217C2001BB716 /* GLImageFaceChangeFilterGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C64C21227217C2001BB716 /* GLImageFaceChangeFilterGroup.m */; };
 		B4D9F70C226A10EE00FD18FC /* GLImageBlurSnapViewFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = B4D9F70A226A10EE00FD18FC /* GLImageBlurSnapViewFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B4D9F70D226A10EE00FD18FC /* GLImageBlurSnapViewFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D9F70B226A10EE00FD18FC /* GLImageBlurSnapViewFilter.m */; };
 		B4DAAC47225724AB0094A3B2 /* GLImageMovie.m in Sources */ = {isa = PBXBuildFile; fileRef = B4DAAC43225724AB0094A3B2 /* GLImageMovie.m */; };
@@ -814,6 +818,10 @@
 		B4A9FE882265CFDA00BC6E51 /* GLImageFaceChangeFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLImageFaceChangeFilter.m; sourceTree = "<group>"; };
 		B4A9FE972266409F00BC6E51 /* GLImageSoulOutFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLImageSoulOutFilter.m; sourceTree = "<group>"; };
 		B4A9FE982266409F00BC6E51 /* GLImageSoulOutFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLImageSoulOutFilter.h; sourceTree = "<group>"; };
+		B4C64C1B2271FFF9001BB716 /* GLImageFaceDetectPointFilter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GLImageFaceDetectPointFilter.h; sourceTree = "<group>"; };
+		B4C64C1C2271FFF9001BB716 /* GLImageFaceDetectPointFilter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GLImageFaceDetectPointFilter.m; sourceTree = "<group>"; };
+		B4C64C20227217C2001BB716 /* GLImageFaceChangeFilterGroup.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GLImageFaceChangeFilterGroup.h; sourceTree = "<group>"; };
+		B4C64C21227217C2001BB716 /* GLImageFaceChangeFilterGroup.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GLImageFaceChangeFilterGroup.m; sourceTree = "<group>"; };
 		B4D9F70A226A10EE00FD18FC /* GLImageBlurSnapViewFilter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GLImageBlurSnapViewFilter.h; sourceTree = "<group>"; };
 		B4D9F70B226A10EE00FD18FC /* GLImageBlurSnapViewFilter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GLImageBlurSnapViewFilter.m; sourceTree = "<group>"; };
 		B4DAAC43225724AB0094A3B2 /* GLImageMovie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLImageMovie.m; sourceTree = "<group>"; };
@@ -1336,6 +1344,10 @@
 			children = (
 				B4A9FE872265CFDA00BC6E51 /* GLImageFaceChangeFilter.h */,
 				B4A9FE882265CFDA00BC6E51 /* GLImageFaceChangeFilter.m */,
+				B4C64C1B2271FFF9001BB716 /* GLImageFaceDetectPointFilter.h */,
+				B4C64C1C2271FFF9001BB716 /* GLImageFaceDetectPointFilter.m */,
+				B4C64C20227217C2001BB716 /* GLImageFaceChangeFilterGroup.h */,
+				B4C64C21227217C2001BB716 /* GLImageFaceChangeFilterGroup.m */,
 				B47A5EF122212EA3006E07A4 /* GPUImageBeautifyFilter.m */,
 				B47A5EF222212EA3006E07A4 /* GPUImageBeautifyFilter.h */,
 			);
@@ -1360,6 +1372,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4C64C22227217C2001BB716 /* GLImageFaceChangeFilterGroup.h in Headers */,
+				B4C64C1D2271FFF9001BB716 /* GLImageFaceDetectPointFilter.h in Headers */,
 				B41FE41B226A260F008DF295 /* GLImageBlurSnapViewFilterGroup.h in Headers */,
 				B4D9F70C226A10EE00FD18FC /* GLImageBlurSnapViewFilter.h in Headers */,
 				B436FECB2266DA2E009C5A0E /* GLImageWaterReflectionFilter.h in Headers */,
@@ -1824,6 +1838,7 @@
 				B462184D222047B600EE2876 /* GPUImageSaturationFilter.m in Sources */,
 				B462185D222047B600EE2876 /* GPUImageRGBErosionFilter.m in Sources */,
 				B462185B222047B600EE2876 /* GPUImageRawDataInput.m in Sources */,
+				B4C64C23227217C2001BB716 /* GLImageFaceChangeFilterGroup.m in Sources */,
 				B46216602220474D00EE2876 /* GPUImageAverageColor.m in Sources */,
 				B462179C2220479F00EE2876 /* GPUImageJFAVoronoiFilter.m in Sources */,
 				B46216912220475E00EE2876 /* GPUImageChromaKeyFilter.m in Sources */,
@@ -1847,6 +1862,7 @@
 				B462181D2220479F00EE2876 /* GPUImageOpeningFilter.m in Sources */,
 				B4621885222047C400EE2876 /* GPUImageSolarizeFilter.m in Sources */,
 				B462161C222046DF00EE2876 /* GPUImageMovie.m in Sources */,
+				B4C64C1E2271FFF9001BB716 /* GLImageFaceDetectPointFilter.m in Sources */,
 				B46218122220479F00EE2876 /* GPUImageGaussianSelectiveBlurFilter.m in Sources */,
 				B46218092220479F00EE2876 /* GPUImageLuminanceThresholdFilter.m in Sources */,
 				B46217EB2220479F00EE2876 /* GPUImageLightenBlendFilter.m in Sources */,
