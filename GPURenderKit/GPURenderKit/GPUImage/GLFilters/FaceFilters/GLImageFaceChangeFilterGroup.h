@@ -19,6 +19,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) float thinFaceParam;
 /** 眼睛调节【-1.0 - 1.0】*/
 @property (nonatomic, assign) float eyeParam;
+/** 鼻子调节【-1.0 - 1.0】*/
+@property (nonatomic, assign) float noseParam;
+
 /** 人脸检测点显示 默认开启*/
 @property (nonatomic, assign) BOOL isShowFaceDetectPointBool;
 

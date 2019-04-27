@@ -19,10 +19,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 /** 是否检测到人脸 */
 @property (nonatomic, assign) BOOL isHaveFace;
-/** 瘦脸调节【-1.0 - 1.0】 */
+/** 瘦脸调节【-1.0 - 1.0】*/
 @property (nonatomic, assign) float thinFaceParam;
 /** 眼睛调节【-1.0 - 1.0】*/
 @property (nonatomic, assign) float eyeParam;
+/** 鼻子调节【-1.0 - 1.0】*/
+@property (nonatomic, assign) float noseParam;
+
 
 - (void)setFacePointsArray:(NSArray *)pointArrays;
 

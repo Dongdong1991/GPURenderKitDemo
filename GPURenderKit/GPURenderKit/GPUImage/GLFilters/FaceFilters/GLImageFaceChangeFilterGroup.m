@@ -74,6 +74,10 @@
     self.faceChangeFilter.eyeParam = eyeParam;
 }
 
+- (void)setNoseParam:(float)noseParam{
+    self.faceChangeFilter.noseParam = noseParam;
+}
+
 - (void)setIsShowFaceDetectPointBool:(BOOL)isShowFaceDetectPointBool{
     self.faceDetectPointFilter.isShowFaceDetectPointBool = isShowFaceDetectPointBool;
 }

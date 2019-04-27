@@ -25,6 +25,7 @@
 @property (nonatomic, assign) BOOL faceServiceBool;
 @property (nonatomic, strong) FaceSliderView *thinFaceView;
 @property (nonatomic, strong) FaceSliderView *eyeFaceView;
+@property (nonatomic, strong) FaceSliderView *noseFaceView;
 @property (nonatomic, strong) FaceSliderView *beautifyView;
 
 @end
@@ -116,7 +117,7 @@
     };
     
     //大眼控制
-    self.eyeFaceView = [[FaceSliderView alloc]initWithFrame:CGRectMake(40, kScreen_H - 100 - 70, w, h)];
+    self.eyeFaceView = [[FaceSliderView alloc]initWithFrame:CGRectMake(40, kScreen_H - 100 - 50, w, h)];
     [self.view addSubview:self.eyeFaceView];
     self.eyeFaceView.title = @"大眼or小眼";
     self.eyeFaceView.minimumValue = -1.0;
@@ -125,9 +126,21 @@
         @strongify(self);
         self.faceChangeFilterGroup.eyeParam = value;
     };
+    
+    //鼻子控制
+    self.noseFaceView = [[FaceSliderView alloc]initWithFrame:CGRectMake(40, kScreen_H - 100 - 100, w, h)];
+    [self.view addSubview:self.noseFaceView];
+    self.noseFaceView.title = @"大鼻or小鼻";
+    self.noseFaceView.minimumValue = -1.0;
+    self.noseFaceView.maximumValue = 1.0;
+    self.noseFaceView.valueChangeBlock = ^(float value) {
+        @strongify(self);
+        self.faceChangeFilterGroup.noseParam = value;
+    };
+
 
     //美颜
-    self.beautifyView = [[FaceSliderView alloc]initWithFrame:CGRectMake(40, kScreen_H - 100 - 140, w, h)];
+    self.beautifyView = [[FaceSliderView alloc]initWithFrame:CGRectMake(40, kScreen_H - 100 - 150, w, h)];
     [self.view addSubview:self.beautifyView];
     self.beautifyView.title = @"美颜";
     self.beautifyView.minimumValue = 0.0;
