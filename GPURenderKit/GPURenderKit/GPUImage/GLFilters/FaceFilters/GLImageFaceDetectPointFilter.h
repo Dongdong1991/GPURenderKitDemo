@@ -19,6 +19,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)setFacePointsArray:(NSArray *)pointArrays;
 
+- (void)setCaptureDevicePosition:(AVCaptureDevicePosition)captureDevicePosition;
+
 
 @end
 

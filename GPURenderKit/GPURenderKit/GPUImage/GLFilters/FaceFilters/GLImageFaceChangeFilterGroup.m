@@ -53,6 +53,14 @@
 
 }
 
+- (void)setCaptureDevicePosition:(AVCaptureDevicePosition)captureDevicePosition{
+    
+    [self.faceChangeFilter setCaptureDevicePosition:captureDevicePosition];
+    [self.faceDetectPointFilter setCaptureDevicePosition:captureDevicePosition];
+
+}
+
+
 #pragma mark ------------------------------------------------------ publicFunc ------------------------------------------------------
 - (void)setIsHaveFace:(BOOL)isHaveFace{
     self.faceChangeFilter.isHaveFace = isHaveFace;

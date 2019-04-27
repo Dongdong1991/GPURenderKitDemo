@@ -43,6 +43,8 @@ NSString *const kGLImageFaceDetectPointVertexShaderString = SHADER_STRING
 
 @property (nonatomic, assign) GLfloat videoFrameW;
 @property (nonatomic, assign) GLfloat videoFrameH;
+/** 是否是前置摄像头 */
+@property (nonatomic, assign) BOOL isFront;
 
 @end
 
@@ -116,25 +118,23 @@ NSString *const kGLImageFaceDetectPointVertexShaderString = SHADER_STRING
     glUniform1i(filterInputTextureUniform, 2);
     
     const GLsizei pointCount = (GLsizei)self.pointArrays.count;
-    GLfloat tempPoint[pointCount * 3];
-    GLubyte indices[pointCount];
+    GLfloat tempPoint[pointCount * 2];
     
     for (int i = 0; i < self.pointArrays.count; i ++) {
         CGPoint pointer = [self.pointArrays[i] CGPointValue];
         
-        GLfloat top = [self changeToGLPointT:pointer.y];
-        GLfloat left = [self changeToGLPointL:pointer.x];
-        
-        tempPoint[i*3+0]=top;
-        tempPoint[i*3+1]=left;
-        tempPoint[i*3+2]=0.0f;
-        indices[i]=i;
+        if (self.isFront) {
+            tempPoint[i*2+0]=  (pointer.y/_videoFrameW) *2.0 - 1.0;
+            tempPoint[i*2+1]=  (pointer.x/_videoFrameH) *2.0 - 1.0;
+        }else{
+            tempPoint[i*2+0]=  1.0 - ((pointer.y/_videoFrameW) * 2.0);
+            tempPoint[i*2+1]=  (pointer.x/_videoFrameH) *2.0 - 1.0;
+        }
     }
     
-    glVertexAttribPointer( 0, 3, GL_FLOAT, GL_TRUE, 0, tempPoint);
-    glEnableVertexAttribArray(GL_VERTEX_ATTRIB_ARRAY_POINTER);
-    glDrawElements(GL_POINTS, (GLsizei)sizeof(indices)/sizeof(GLubyte), GL_UNSIGNED_BYTE, indices);
-    
+    glVertexAttribPointer(self->filterPositionAttribute, 2, GL_FLOAT, GL_FALSE, 0, tempPoint);
+    glDrawArrays(GL_POINTS, 0, (GLsizei)self.pointArrays.count);
+
     [self informTargetsAboutNewFrameAtTime:frameTime];
     [firstInputFramebuffer unlock];
     if (usingNextFrameForImageCapture)
@@ -144,21 +144,13 @@ NSString *const kGLImageFaceDetectPointVertexShaderString = SHADER_STRING
 
 }
 
-- (GLfloat)changeToGLPointT:(CGFloat)x{
-    GLfloat tempX = (x - self.videoFrameW/2) / (self.videoFrameW/2);
-    return tempX;
-}
-- (GLfloat)changeToGLPointL:(CGFloat)y{
-    GLfloat tempY = (self.videoFrameH/2 - (self.videoFrameH - y)) / (self.videoFrameH/2);
-    return tempY;
-}
-- (GLfloat)changeToGLPointR:(CGFloat)y{
-    GLfloat tempR = (self.videoFrameH/2 - y) / (self.videoFrameH/2);
-    return tempR;
-}
-- (GLfloat)changeToGLPointB:(CGFloat)y{
-    GLfloat tempB = (y - self.videoFrameW/2) / (self.videoFrameW/2);
-    return tempB;
+- (void)setCaptureDevicePosition:(AVCaptureDevicePosition)captureDevicePosition{
+    
+    if (captureDevicePosition == AVCaptureDevicePositionBack) {
+        self.isFront = NO;
+    }else{
+        self.isFront = YES;
+    }
 }
 
 

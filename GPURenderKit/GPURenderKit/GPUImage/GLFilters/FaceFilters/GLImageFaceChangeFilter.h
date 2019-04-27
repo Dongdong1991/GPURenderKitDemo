@@ -8,7 +8,7 @@
 
 
 
-
+#import <GPURenderKit/GPURenderKit.h>
 #import "GPUImageFilter.h"
 NS_ASSUME_NONNULL_BEGIN
 
@@ -25,6 +25,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) float eyeParam;
 
 - (void)setFacePointsArray:(NSArray *)pointArrays;
+
+- (void)setCaptureDevicePosition:(AVCaptureDevicePosition)captureDevicePosition;
 
 
 @end

@@ -20,6 +20,8 @@
 @property (nonatomic, strong) UIButton *rotateBtn;
 @property (nonatomic, strong) UISwitch *switchView;
 
+@property (nonatomic, assign) AVCaptureDevicePosition devicePosition;
+
 @property (nonatomic, assign) BOOL faceServiceBool;
 @property (nonatomic, strong) FaceSliderView *thinFaceView;
 @property (nonatomic, strong) FaceSliderView *eyeFaceView;
@@ -93,6 +95,7 @@
     
     //添加瘦脸，大眼filter
     self.faceChangeFilterGroup = [[GLImageFaceChangeFilterGroup alloc]init];
+    [self.faceChangeFilterGroup setCaptureDevicePosition:self.videoCamera.cameraPosition];
     [self.faceChangeFilterGroup addTarget:self.preview];
     [self.beautifyFilter addTarget:self.faceChangeFilterGroup];
     [self.videoCamera addTarget:self.beautifyFilter];
@@ -215,11 +218,12 @@
 {
     if (!_videoCamera)
     {
-        _videoCamera = [[GPUImageVideoCamera alloc] initWithSessionPreset:AVCaptureSessionPreset1280x720 cameraPosition:AVCaptureDevicePositionFront];
+        _videoCamera = [[GPUImageVideoCamera alloc] initWithSessionPreset:AVCaptureSessionPreset1280x720 cameraPosition:AVCaptureDevicePositionBack];
         _videoCamera.runBenchmark = NO;
         _videoCamera.horizontallyMirrorFrontFacingCamera = YES;
         _videoCamera.outputImageOrientation = UIInterfaceOrientationPortrait;
         _videoCamera.delegate = self;
+        self.devicePosition = _videoCamera.cameraPosition;
         [_videoCamera startCameraCapture];
     }
     
@@ -251,6 +255,12 @@
 
 - (void)rotateBtnAction{
     [_videoCamera rotateCamera];
+    self.devicePosition = _videoCamera.cameraPosition;
+    
+    if (self.faceServiceBool) {
+        [self.faceChangeFilterGroup setCaptureDevicePosition:self.videoCamera.cameraPosition];
+    }
+    
 }
 
 /** 是否显示人脸检测关键点 */
@@ -288,6 +298,7 @@
     NSLog(@"face Count : %zd",faceCount);
     for (MGFaceInfo *faceInfo in tempArray) {
         [self.markManager GetGetLandmark:faceInfo isSmooth:YES pointsNumber:106];
+//        NSLog(@"%@",faceInfo.points);
         [self.faceChangeFilterGroup setFacePointsArray:faceInfo.points];
     }
     [self.markManager endDetectionFrame];

@@ -173,6 +173,8 @@ NSString *const kGLImageFaceChangeFragmentShaderString = SHADER_STRING
 
 @interface GLImageFaceChangeFilter ()
 @property (nonatomic, assign) CGSize frameBufferSize;
+/** 是否是前置摄像头 */
+@property (nonatomic, assign) BOOL isFront;
 @end
 
 
@@ -222,8 +224,14 @@ NSString *const kGLImageFaceChangeFragmentShaderString = SHADER_STRING
     for (int index = 0; index < FACE_POINTS_COUNT; index++)
     {
         CGPoint point = [pointArrays[index] CGPointValue];
-        facePoints[2 * index + 0] = point.y / width;
-        facePoints[2 * index + 1] = point.x / height;
+        
+        if (self.isFront) {
+            facePoints[2 * index + 0] = (point.y / width);
+        }else{
+            facePoints[2 * index + 0] = 1.0 - (point.y / width);
+        }
+        
+        facePoints[2 * index + 1] = (point.x / height);
     }
     
     [self setFloatVec2Array:facePoints length:FACE_POINTS_COUNT*2 forUniform:faceArrayUniform program:filterProgram];
@@ -235,6 +243,16 @@ NSString *const kGLImageFaceChangeFragmentShaderString = SHADER_STRING
     _frameBufferSize = filterFrameSize;
     [self setSize:filterFrameSize forUniform:iResolutionUniform program:filterProgram];
 }
+
+- (void)setCaptureDevicePosition:(AVCaptureDevicePosition)captureDevicePosition{
+    
+    if (captureDevicePosition == AVCaptureDevicePositionBack) {
+        self.isFront = NO;
+    }else{
+        self.isFront = YES;
+    }
+}
+
 
 
 @end
