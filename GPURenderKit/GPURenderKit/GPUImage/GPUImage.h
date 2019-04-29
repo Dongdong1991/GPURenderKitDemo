@@ -184,7 +184,8 @@
 #import "GLImageBlendFilter.h" // This is the base class
 #import "GLImageMixBlendFilter.h"
 #import "GPUImageGaussianBlurFilter.h"
-
+#import "GLImageShapeFilter.h"
+#import "GLImageShapeHighDefinitionFilter.h"
 
 //抖音
 #import "GLImageThreePartitionFilter.h"

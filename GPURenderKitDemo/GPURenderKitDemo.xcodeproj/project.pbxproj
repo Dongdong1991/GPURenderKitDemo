@@ -7,6 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B41317382277258A00B4866F /* 纹理.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B413170A2277258A00B4866F /* 纹理.jpg */; };
+		B41317392277258A00B4866F /* 长图.JPG in Resources */ = {isa = PBXBuildFile; fileRef = B413170B2277258A00B4866F /* 长图.JPG */; };
+		B413173A2277258A00B4866F /* 宽图.JPG in Resources */ = {isa = PBXBuildFile; fileRef = B413170C2277258A00B4866F /* 宽图.JPG */; };
+		B413173B2277258A00B4866F /* 方图600*600.JPG in Resources */ = {isa = PBXBuildFile; fileRef = B413170D2277258A00B4866F /* 方图600*600.JPG */; };
+		B413173C2277258A00B4866F /* 原图.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B413170E2277258A00B4866F /* 原图.jpg */; };
+		B413173D2277258A00B4866F /* UIView+Xib.m in Sources */ = {isa = PBXBuildFile; fileRef = B41317102277258A00B4866F /* UIView+Xib.m */; };
+		B413173E2277258A00B4866F /* DDShapeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B41317122277258A00B4866F /* DDShapeViewController.m */; };
+		B41317412277258A00B4866F /* ATRiseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B413171B2277258A00B4866F /* ATRiseViewController.m */; };
+		B41317422277258A00B4866F /* ATSelectBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B413171E2277258A00B4866F /* ATSelectBarView.xib */; };
+		B41317432277258A00B4866F /* WeSliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = B41317232277258A00B4866F /* WeSliderView.m */; };
+		B41317442277258A00B4866F /* ATSliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = B41317242277258A00B4866F /* ATSliderView.m */; };
+		B41317452277258A00B4866F /* DDGLShapeControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = B41317272277258A00B4866F /* DDGLShapeControlView.m */; };
+		B41317462277258A00B4866F /* DDGLSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = B413172B2277258A00B4866F /* DDGLSelectView.m */; };
+		B41317472277258A00B4866F /* DDGLShapingView.m in Sources */ = {isa = PBXBuildFile; fileRef = B413172C2277258A00B4866F /* DDGLShapingView.m */; };
+		B41317482277258A00B4866F /* DDGLShapeSelView.m in Sources */ = {isa = PBXBuildFile; fileRef = B413172E2277258A00B4866F /* DDGLShapeSelView.m */; };
+		B41317492277258A00B4866F /* DDGLShapeView.m in Sources */ = {isa = PBXBuildFile; fileRef = B413172F2277258A00B4866F /* DDGLShapeView.m */; };
+		B413174A2277258A00B4866F /* ATRiseMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = B41317302277258A00B4866F /* ATRiseMenuView.m */; };
+		B413174B2277258A00B4866F /* ATSelectBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = B41317312277258A00B4866F /* ATSelectBarView.m */; };
 		B42A993E226D6E860067297F /* 人脸106个关键点.png in Resources */ = {isa = PBXBuildFile; fileRef = B42A993B226D6E860067297F /* 人脸106个关键点.png */; };
 		B42C4F2D225DB9B400CF9B9B /* 6666.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B42C4F2A225DB9B400CF9B9B /* 6666.mp3 */; };
 		B42C4F4A225F3ACF00CF9B9B /* GLImageFilterListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B42C4F49225F3ACF00CF9B9B /* GLImageFilterListViewController.m */; };
@@ -37,6 +55,8 @@
 		B49EF66B226399BD00C220B0 /* MovieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B49EF66A226399BD00C220B0 /* MovieViewController.m */; };
 		B4A9FE782265BF6F00BC6E51 /* FaceSliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A9FE772265BF6F00BC6E51 /* FaceSliderView.m */; };
 		B4A9FE842265C5BA00BC6E51 /* GPURenderKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4A9FE812265C5B000BC6E51 /* GPURenderKit.framework */; };
+		B4C64C3322748239001BB716 /* VideoEcodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C64C3222748239001BB716 /* VideoEcodeViewController.m */; };
+		B4C64C3622748A5A001BB716 /* DDVideoEcodeManage.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C64C3522748A5A001BB716 /* DDVideoEcodeManage.m */; };
 		B4DAAC4D2257257F0094A3B2 /* GLImageMovieUseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4DAAC4C2257257F0094A3B2 /* GLImageMovieUseViewController.m */; };
 		B4DAAC50225726000094A3B2 /* DDAVAssetRenderManage.m in Sources */ = {isa = PBXBuildFile; fileRef = B4DAAC4F225726000094A3B2 /* DDAVAssetRenderManage.m */; };
 		B4DAAC5222573EB90094A3B2 /* 测试视频.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = B4DAAC5122573EB80094A3B2 /* 测试视频.mp4 */; };
@@ -80,6 +100,36 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B41317022277258A00B4866F /* DDShapeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDShapeViewController.h; sourceTree = "<group>"; };
+		B413170A2277258A00B4866F /* 纹理.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "纹理.jpg"; sourceTree = "<group>"; };
+		B413170B2277258A00B4866F /* 长图.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "长图.JPG"; sourceTree = "<group>"; };
+		B413170C2277258A00B4866F /* 宽图.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "宽图.JPG"; sourceTree = "<group>"; };
+		B413170D2277258A00B4866F /* 方图600*600.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "方图600*600.JPG"; sourceTree = "<group>"; };
+		B413170E2277258A00B4866F /* 原图.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "原图.jpg"; sourceTree = "<group>"; };
+		B41317102277258A00B4866F /* UIView+Xib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Xib.m"; sourceTree = "<group>"; };
+		B41317112277258A00B4866F /* UIView+Xib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Xib.h"; sourceTree = "<group>"; };
+		B41317122277258A00B4866F /* DDShapeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDShapeViewController.m; sourceTree = "<group>"; };
+		B413171A2277258A00B4866F /* ATRiseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATRiseViewController.h; sourceTree = "<group>"; };
+		B413171B2277258A00B4866F /* ATRiseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATRiseViewController.m; sourceTree = "<group>"; };
+		B413171D2277258A00B4866F /* ATRiseMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATRiseMenuView.h; sourceTree = "<group>"; };
+		B413171E2277258A00B4866F /* ATSelectBarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ATSelectBarView.xib; sourceTree = "<group>"; };
+		B413171F2277258A00B4866F /* ATSelectBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATSelectBarView.h; sourceTree = "<group>"; };
+		B41317212277258A00B4866F /* WeSliderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeSliderView.h; sourceTree = "<group>"; };
+		B41317222277258A00B4866F /* ATSliderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATSliderView.h; sourceTree = "<group>"; };
+		B41317232277258A00B4866F /* WeSliderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeSliderView.m; sourceTree = "<group>"; };
+		B41317242277258A00B4866F /* ATSliderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATSliderView.m; sourceTree = "<group>"; };
+		B41317262277258A00B4866F /* DDGLSelectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDGLSelectView.h; sourceTree = "<group>"; };
+		B41317272277258A00B4866F /* DDGLShapeControlView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDGLShapeControlView.m; sourceTree = "<group>"; };
+		B41317282277258A00B4866F /* DDGLShapingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDGLShapingView.h; sourceTree = "<group>"; };
+		B41317292277258A00B4866F /* DDGLShapeSelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDGLShapeSelView.h; sourceTree = "<group>"; };
+		B413172A2277258A00B4866F /* DDGLShapeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDGLShapeView.h; sourceTree = "<group>"; };
+		B413172B2277258A00B4866F /* DDGLSelectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDGLSelectView.m; sourceTree = "<group>"; };
+		B413172C2277258A00B4866F /* DDGLShapingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDGLShapingView.m; sourceTree = "<group>"; };
+		B413172D2277258A00B4866F /* DDGLShapeControlView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDGLShapeControlView.h; sourceTree = "<group>"; };
+		B413172E2277258A00B4866F /* DDGLShapeSelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDGLShapeSelView.m; sourceTree = "<group>"; };
+		B413172F2277258A00B4866F /* DDGLShapeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDGLShapeView.m; sourceTree = "<group>"; };
+		B41317302277258A00B4866F /* ATRiseMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATRiseMenuView.m; sourceTree = "<group>"; };
+		B41317312277258A00B4866F /* ATSelectBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATSelectBarView.m; sourceTree = "<group>"; };
 		B42A993B226D6E860067297F /* 人脸106个关键点.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "人脸106个关键点.png"; sourceTree = "<group>"; };
 		B42C4F2A225DB9B400CF9B9B /* 6666.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 6666.mp3; sourceTree = "<group>"; };
 		B42C4F48225F3ACF00CF9B9B /* GLImageFilterListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GLImageFilterListViewController.h; sourceTree = "<group>"; };
@@ -133,6 +183,10 @@
 		B4A9FE762265BF6F00BC6E51 /* FaceSliderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FaceSliderView.h; sourceTree = "<group>"; };
 		B4A9FE772265BF6F00BC6E51 /* FaceSliderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FaceSliderView.m; sourceTree = "<group>"; };
 		B4A9FE7B2265C5B000BC6E51 /* GPURenderKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GPURenderKit.xcodeproj; path = ../../GPURenderKit/GPURenderKit.xcodeproj; sourceTree = "<group>"; };
+		B4C64C3122748239001BB716 /* VideoEcodeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoEcodeViewController.h; sourceTree = "<group>"; };
+		B4C64C3222748239001BB716 /* VideoEcodeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoEcodeViewController.m; sourceTree = "<group>"; };
+		B4C64C3422748A5A001BB716 /* DDVideoEcodeManage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDVideoEcodeManage.h; sourceTree = "<group>"; };
+		B4C64C3522748A5A001BB716 /* DDVideoEcodeManage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDVideoEcodeManage.m; sourceTree = "<group>"; };
 		B4DAAC4B2257257F0094A3B2 /* GLImageMovieUseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GLImageMovieUseViewController.h; sourceTree = "<group>"; };
 		B4DAAC4C2257257F0094A3B2 /* GLImageMovieUseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GLImageMovieUseViewController.m; sourceTree = "<group>"; };
 		B4DAAC4E225726000094A3B2 /* DDAVAssetRenderManage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDAVAssetRenderManage.h; sourceTree = "<group>"; };
@@ -187,6 +241,99 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B41317012277258A00B4866F /* DDShapeViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B41317022277258A00B4866F /* DDShapeViewController.h */,
+				B41317122277258A00B4866F /* DDShapeViewController.m */,
+				B41317092277258A00B4866F /* Pic */,
+				B413170F2277258A00B4866F /* View */,
+				B41317182277258A00B4866F /* Rise */,
+			);
+			path = DDShapeViewController;
+			sourceTree = "<group>";
+		};
+		B41317092277258A00B4866F /* Pic */ = {
+			isa = PBXGroup;
+			children = (
+				B413170A2277258A00B4866F /* 纹理.jpg */,
+				B413170B2277258A00B4866F /* 长图.JPG */,
+				B413170C2277258A00B4866F /* 宽图.JPG */,
+				B413170D2277258A00B4866F /* 方图600*600.JPG */,
+				B413170E2277258A00B4866F /* 原图.jpg */,
+			);
+			path = Pic;
+			sourceTree = "<group>";
+		};
+		B413170F2277258A00B4866F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B41317102277258A00B4866F /* UIView+Xib.m */,
+				B41317112277258A00B4866F /* UIView+Xib.h */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B41317182277258A00B4866F /* Rise */ = {
+			isa = PBXGroup;
+			children = (
+				B41317192277258A00B4866F /* Controller */,
+				B413171C2277258A00B4866F /* View */,
+			);
+			path = Rise;
+			sourceTree = "<group>";
+		};
+		B41317192277258A00B4866F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B413171A2277258A00B4866F /* ATRiseViewController.h */,
+				B413171B2277258A00B4866F /* ATRiseViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B413171C2277258A00B4866F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B413171D2277258A00B4866F /* ATRiseMenuView.h */,
+				B413171E2277258A00B4866F /* ATSelectBarView.xib */,
+				B413171F2277258A00B4866F /* ATSelectBarView.h */,
+				B41317202277258A00B4866F /* Slider */,
+				B41317252277258A00B4866F /* DDGLShapeView */,
+				B41317302277258A00B4866F /* ATRiseMenuView.m */,
+				B41317312277258A00B4866F /* ATSelectBarView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B41317202277258A00B4866F /* Slider */ = {
+			isa = PBXGroup;
+			children = (
+				B41317212277258A00B4866F /* WeSliderView.h */,
+				B41317222277258A00B4866F /* ATSliderView.h */,
+				B41317232277258A00B4866F /* WeSliderView.m */,
+				B41317242277258A00B4866F /* ATSliderView.m */,
+			);
+			path = Slider;
+			sourceTree = "<group>";
+		};
+		B41317252277258A00B4866F /* DDGLShapeView */ = {
+			isa = PBXGroup;
+			children = (
+				B41317262277258A00B4866F /* DDGLSelectView.h */,
+				B41317272277258A00B4866F /* DDGLShapeControlView.m */,
+				B41317282277258A00B4866F /* DDGLShapingView.h */,
+				B41317292277258A00B4866F /* DDGLShapeSelView.h */,
+				B413172A2277258A00B4866F /* DDGLShapeView.h */,
+				B413172B2277258A00B4866F /* DDGLSelectView.m */,
+				B413172C2277258A00B4866F /* DDGLShapingView.m */,
+				B413172D2277258A00B4866F /* DDGLShapeControlView.h */,
+				B413172E2277258A00B4866F /* DDGLShapeSelView.m */,
+				B413172F2277258A00B4866F /* DDGLShapeView.m */,
+			);
+			path = DDGLShapeView;
+			sourceTree = "<group>";
+		};
 		B42C4F47225F3A7000CF9B9B /* GLImageFilterList */ = {
 			isa = PBXGroup;
 			children = (
@@ -234,6 +381,8 @@
 		B4620D652220413400EE2876 /* GPURenderKitDemo */ = {
 			isa = PBXGroup;
 			children = (
+				B41317012277258A00B4866F /* DDShapeViewController */,
+				B4C64C2E227481CA001BB716 /* VideoCode */,
 				B4DC43AB2264CE48009C08A0 /* Face */,
 				B49EF6462263723500C220B0 /* Tool */,
 				B49EF61422634BBE00C220B0 /* Support */,
@@ -338,6 +487,17 @@
 				B4A9FE832265C5B000BC6E51 /* GPURenderKitTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		B4C64C2E227481CA001BB716 /* VideoCode */ = {
+			isa = PBXGroup;
+			children = (
+				B4C64C3122748239001BB716 /* VideoEcodeViewController.h */,
+				B4C64C3222748239001BB716 /* VideoEcodeViewController.m */,
+				B4C64C3422748A5A001BB716 /* DDVideoEcodeManage.h */,
+				B4C64C3522748A5A001BB716 /* DDVideoEcodeManage.m */,
+			);
+			path = VideoCode;
 			sourceTree = "<group>";
 		};
 		B4DAAC3F2257243D0094A3B2 /* GLImageMovie */ = {
@@ -547,12 +707,18 @@
 			files = (
 				B4620D732220413500EE2876 /* LaunchScreen.storyboard in Resources */,
 				B49EF6432263541400C220B0 /* glitchPicture001.png in Resources */,
+				B413173A2277258A00B4866F /* 宽图.JPG in Resources */,
 				B49EF6402263541400C220B0 /* glitchPicture003.png in Resources */,
 				B42A993E226D6E860067297F /* 人脸106个关键点.png in Resources */,
+				B41317422277258A00B4866F /* ATSelectBarView.xib in Resources */,
+				B41317382277258A00B4866F /* 纹理.jpg in Resources */,
+				B413173B2277258A00B4866F /* 方图600*600.JPG in Resources */,
 				B49EF6442263541400C220B0 /* glitchPicture005.png in Resources */,
 				B4620D702220413500EE2876 /* Assets.xcassets in Resources */,
 				B49EF6412263541400C220B0 /* glitchPicture002.png in Resources */,
+				B413173C2277258A00B4866F /* 原图.jpg in Resources */,
 				B49EF6452263541400C220B0 /* glitchPicture004.png in Resources */,
+				B41317392277258A00B4866F /* 长图.JPG in Resources */,
 				B42C4F2D225DB9B400CF9B9B /* 6666.mp3 in Resources */,
 				B4DC43E42264D372009C08A0 /* megviifacepp_0_5_2_model in Resources */,
 				B49EF63F2263541400C220B0 /* glitchPicture100.png in Resources */,
@@ -582,25 +748,39 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B41317412277258A00B4866F /* ATRiseViewController.m in Sources */,
+				B41317462277258A00B4866F /* DDGLSelectView.m in Sources */,
 				B49EF60C22622D6D00C220B0 /* GLImageFilterShowViewController.m in Sources */,
 				B49EF62D22634BDD00C220B0 /* GLSliderView.m in Sources */,
 				B4620D762220413500EE2876 /* main.m in Sources */,
+				B413174B2277258A00B4866F /* ATSelectBarView.m in Sources */,
+				B41317492277258A00B4866F /* DDGLShapeView.m in Sources */,
 				B4DAAC50225726000094A3B2 /* DDAVAssetRenderManage.m in Sources */,
 				B49EF66B226399BD00C220B0 /* MovieViewController.m in Sources */,
+				B41317432277258A00B4866F /* WeSliderView.m in Sources */,
 				B47A5ED4222127EE006E07A4 /* BaseViewController.m in Sources */,
 				B49EF62C22634BDD00C220B0 /* GLImagePickerHelper.m in Sources */,
 				B4620D682220413400EE2876 /* AppDelegate.m in Sources */,
 				B42C4F4A225F3ACF00CF9B9B /* GLImageFilterListViewController.m in Sources */,
+				B41317442277258A00B4866F /* ATSliderView.m in Sources */,
+				B4C64C3322748239001BB716 /* VideoEcodeViewController.m in Sources */,
+				B41317472277258A00B4866F /* DDGLShapingView.m in Sources */,
 				B42EC0542252044900226FA0 /* DouYinEffectTabView.m in Sources */,
 				B4DAAC4D2257257F0094A3B2 /* GLImageMovieUseViewController.m in Sources */,
 				B4DC43E22264D372009C08A0 /* MGFaceLicenseHandle.m in Sources */,
+				B41317452277258A00B4866F /* DDGLShapeControlView.m in Sources */,
+				B413173D2277258A00B4866F /* UIView+Xib.m in Sources */,
+				B413174A2277258A00B4866F /* ATRiseMenuView.m in Sources */,
 				B47A5ED7222127FF006E07A4 /* MainViewController.m in Sources */,
 				B49EF62E22634BDD00C220B0 /* GLFilterInfoView.m in Sources */,
 				B49EF62B22634BDD00C220B0 /* UIImage+Rotate.m in Sources */,
 				B49EF64C226372C200C220B0 /* DDMediaEditorManage.m in Sources */,
 				B4DC43BC2264CE9A009C08A0 /* FaceViewController.mm in Sources */,
 				B4A9FE782265BF6F00BC6E51 /* FaceSliderView.m in Sources */,
+				B41317482277258A00B4866F /* DDGLShapeSelView.m in Sources */,
+				B4C64C3622748A5A001BB716 /* DDVideoEcodeManage.m in Sources */,
 				B42EC0512252039600226FA0 /* GLDouYinEffectViewController.m in Sources */,
+				B413173E2277258A00B4866F /* DDShapeViewController.m in Sources */,
 				B49EF65D226393D200C220B0 /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

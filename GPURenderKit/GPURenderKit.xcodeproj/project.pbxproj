@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B41317502277277300B4866F /* GLImageShapeFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = B413174C2277277200B4866F /* GLImageShapeFilter.m */; };
+		B41317512277277300B4866F /* GLImageShapeFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = B413174D2277277300B4866F /* GLImageShapeFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B41317522277277300B4866F /* GLImageShapeHighDefinitionFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = B413174E2277277300B4866F /* GLImageShapeHighDefinitionFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B41317532277277300B4866F /* GLImageShapeHighDefinitionFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = B413174F2277277300B4866F /* GLImageShapeHighDefinitionFilter.m */; };
 		B41FE41B226A260F008DF295 /* GLImageBlurSnapViewFilterGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = B41FE419226A260F008DF295 /* GLImageBlurSnapViewFilterGroup.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B41FE41C226A260F008DF295 /* GLImageBlurSnapViewFilterGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = B41FE41A226A260F008DF295 /* GLImageBlurSnapViewFilterGroup.m */; };
 		B42D8D62223F8A5600517EA7 /* GLImageCircleFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = B42D8D60223F8A5500517EA7 /* GLImageCircleFilter.m */; };
@@ -422,6 +426,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B413174C2277277200B4866F /* GLImageShapeFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLImageShapeFilter.m; sourceTree = "<group>"; };
+		B413174D2277277300B4866F /* GLImageShapeFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLImageShapeFilter.h; sourceTree = "<group>"; };
+		B413174E2277277300B4866F /* GLImageShapeHighDefinitionFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLImageShapeHighDefinitionFilter.h; sourceTree = "<group>"; };
+		B413174F2277277300B4866F /* GLImageShapeHighDefinitionFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLImageShapeHighDefinitionFilter.m; sourceTree = "<group>"; };
 		B41FE419226A260F008DF295 /* GLImageBlurSnapViewFilterGroup.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GLImageBlurSnapViewFilterGroup.h; sourceTree = "<group>"; };
 		B41FE41A226A260F008DF295 /* GLImageBlurSnapViewFilterGroup.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GLImageBlurSnapViewFilterGroup.m; sourceTree = "<group>"; };
 		B42D8D60223F8A5500517EA7 /* GLImageCircleFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLImageCircleFilter.m; sourceTree = "<group>"; };
@@ -1335,6 +1343,10 @@
 				B44ADD0F2226695100F17956 /* GLImageMixBlendFilter.m */,
 				B44ADD17222669AA00F17956 /* GLImageGassianBlurMixFilter.h */,
 				B44ADD18222669AB00F17956 /* GLImageGassianBlurMixFilter.m */,
+				B413174D2277277300B4866F /* GLImageShapeFilter.h */,
+				B413174C2277277200B4866F /* GLImageShapeFilter.m */,
+				B413174E2277277300B4866F /* GLImageShapeHighDefinitionFilter.h */,
+				B413174F2277277300B4866F /* GLImageShapeHighDefinitionFilter.m */,
 			);
 			path = ColorProcessing;
 			sourceTree = "<group>";
@@ -1372,8 +1384,10 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B41317512277277300B4866F /* GLImageShapeFilter.h in Headers */,
 				B4C64C22227217C2001BB716 /* GLImageFaceChangeFilterGroup.h in Headers */,
 				B4C64C1D2271FFF9001BB716 /* GLImageFaceDetectPointFilter.h in Headers */,
+				B41317522277277300B4866F /* GLImageShapeHighDefinitionFilter.h in Headers */,
 				B41FE41B226A260F008DF295 /* GLImageBlurSnapViewFilterGroup.h in Headers */,
 				B4D9F70C226A10EE00FD18FC /* GLImageBlurSnapViewFilter.h in Headers */,
 				B436FECB2266DA2E009C5A0E /* GLImageWaterReflectionFilter.h in Headers */,
@@ -1844,6 +1858,7 @@
 				B46216912220475E00EE2876 /* GPUImageChromaKeyFilter.m in Sources */,
 				B46217A32220479F00EE2876 /* GPUImageHueBlendFilter.m in Sources */,
 				B46216DB2220477200EE2876 /* GPUImageUnsharpMaskFilter.m in Sources */,
+				B41317502277277300B4866F /* GLImageShapeFilter.m in Sources */,
 				B44ADD0B222668DD00F17956 /* GLImageAddStickerFilter.m in Sources */,
 				B4621624222046DF00EE2876 /* GPUImageFilterGroup.m in Sources */,
 				B462188F222047C400EE2876 /* GPUImageSubtractBlendFilter.m in Sources */,
@@ -1871,6 +1886,7 @@
 				B44ADD142226695200F17956 /* GLImageBlendFilter.m in Sources */,
 				B4621622222046DF00EE2876 /* GPUImageTextureInput.m in Sources */,
 				B46216DC2220477200EE2876 /* GPUImageXYDerivativeFilter.m in Sources */,
+				B41317532277277300B4866F /* GLImageShapeHighDefinitionFilter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
