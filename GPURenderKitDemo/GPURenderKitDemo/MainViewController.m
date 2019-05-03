@@ -54,6 +54,7 @@ typedef NS_ENUM(NSInteger,ActionType)
         NSDictionary *dic4 = [self actionDic:@"美颜,脸，鼻，眼调节（基于FragmentShader调节--已实现）" type:ActionType_Face_Fragment viewcontrollerName:@"FaceViewController"];
         NSDictionary *dic5 = [self actionDic:@"美颜,瘦脸,大眼（基于VertexShader调节--未实现）" type:ActionType_Empty viewcontrollerName:@""];
         NSDictionary *dic6 = [self actionDic:@"增高，瘦身效果调节" type:ActionType_Shape viewcontrollerName:@"DDShapeViewController"];
+        
         _dataSource = @[dic1,dic2,dic3,dic4,dic5,dic6];
         
     }

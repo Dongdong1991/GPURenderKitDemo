@@ -23,6 +23,9 @@
 @property (nonatomic, strong) UIImage *sourceImage;
 @property (nonatomic, strong) GPUImageOutput <GPUImageInput> *filter;
 @property (nonatomic, strong) GLFilterInfoView *filterInfoView;
+@property (nonatomic,   copy) void (^silderValueDidChangeHandler)(float value);
+
+
 
 @end
 
@@ -42,7 +45,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
- 
+    
     [self createSubviews];
     [self setupFilter];
     
@@ -56,7 +59,6 @@
     self.preview.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.8];
     [self.preview setBackgroundColorRed:0.2 green:0.2 blue:0.2 alpha:1.0];
     [self.view addSubview:self.preview];
-    
     [self.view addSubview:self.silderView];
     self.filterInfoView = [[GLFilterInfoView alloc] initWithFrame:CGRectMake(0, self.view.bounds.size.height - 100, self.view.bounds.size.width, 100)];
     self.filterInfoView.userInteractionEnabled = NO;
@@ -81,23 +83,31 @@
 {
     switch (self.filterType) {
         case GLIMAGE_LUT:
-            {
-                GLImageLutFilter *lutFilter = [[GLImageLutFilter alloc]init];
-                [lutFilter setLutImage:[UIImage imageNamed:@"exposure_n"]];
-                self.filter = lutFilter;
-            }
-            break;
-        case GL_IMAGE_ADDSTICKER:
         {
-            GLImageAddStickerFilter *lutFilter = [[GLImageAddStickerFilter alloc]init];
-            [lutFilter setStickerImage:[UIImage imageNamed:@"bunny"]];
-            lutFilter.center = CGPointMake(0.5, 0.5);
-            lutFilter.theta = 0.0;
-            lutFilter.size = CGSizeMake(0.25, 0.25);
+            GLImageLutFilter *lutFilter = [[GLImageLutFilter alloc]init];
+            [lutFilter setLutImage:[UIImage imageNamed:@"exposure_n"]];
             self.filter = lutFilter;
         }
             break;
-
+        case GL_IMAGE_ADDSTICKER:
+        {
+            GLImageAddStickerFilter *stickerFilter = [[GLImageAddStickerFilter alloc]init];
+            UIImage *stickerImage = [UIImage imageNamed:@"bunny"];
+            [stickerFilter setStickerImage:stickerImage];
+            stickerFilter.center = CGPointMake(0.5, 0.5);
+            stickerFilter.theta = 0.0;
+            self.filter = stickerFilter;
+            self.silderView.minimumValue = 0.0;
+            self.silderView.maximumValue = 2.0;
+            
+            self.silderValueDidChangeHandler = ^(float value) {
+                stickerFilter.theta = value*M_PI;
+                stickerFilter.center = CGPointMake(0.5*value, 0.5*value);
+                NSLog(@"调节中心点，大小");
+            };
+        }
+            break;
+            
             
             
         default:
@@ -162,11 +172,10 @@
 {
     if (!_videoCamera)
     {
-        _videoCamera = [[GPUImageVideoCamera alloc] init];
+        _videoCamera = [[GPUImageVideoCamera alloc] initWithSessionPreset:AVCaptureSessionPreset1280x720 cameraPosition:AVCaptureDevicePositionFront];
         _videoCamera.runBenchmark = YES;
         _videoCamera.horizontallyMirrorFrontFacingCamera = YES;
         _videoCamera.outputImageOrientation = UIInterfaceOrientationPortrait;
-        //[_videoCamera rotateCamera];
         [_videoCamera startCameraCapture];
     }
     
@@ -203,6 +212,17 @@
     return _movie;
 }
 
+- (GLSliderView *)silderView
+{
+    if (!_silderView)
+    {
+        _silderView = [[GLSliderView alloc] initWithFrame:CGRectMake(0, 64, self.view.bounds.size.width, self.view.bounds.size.height - 64)];
+        [_silderView addTarget:self action:@selector(sliderViewValueDidChangeAction:)];
+    }
+    
+    return _silderView;
+}
+
 - (GPUImageOutput *)inputSource
 {
     switch (self.inputSourceType)
@@ -212,6 +232,19 @@
         case GL_INPUT_SOURCE_MOVIE: return self.movie;
         default: return nil;
     }
+}
+
+
+
+- (void)sliderViewValueDidChangeAction:(UISlider *)sender
+{
+    if (self.silderValueDidChangeHandler)
+    {
+        self.silderValueDidChangeHandler(sender.value);
+    }
+    
+    self.filterInfoView.degree = sender.value;
+    [self startProcessFilter];
 }
 
 

@@ -241,7 +241,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		B41317012277258A00B4866F /* DDShapeViewController */ = {
+		B41317012277258A00B4866F /* ShapeChange */ = {
 			isa = PBXGroup;
 			children = (
 				B41317022277258A00B4866F /* DDShapeViewController.h */,
@@ -250,7 +250,7 @@
 				B413170F2277258A00B4866F /* View */,
 				B41317182277258A00B4866F /* Rise */,
 			);
-			path = DDShapeViewController;
+			path = ShapeChange;
 			sourceTree = "<group>";
 		};
 		B41317092277258A00B4866F /* Pic */ = {
@@ -381,7 +381,7 @@
 		B4620D652220413400EE2876 /* GPURenderKitDemo */ = {
 			isa = PBXGroup;
 			children = (
-				B41317012277258A00B4866F /* DDShapeViewController */,
+				B41317012277258A00B4866F /* ShapeChange */,
 				B4C64C2E227481CA001BB716 /* VideoCode */,
 				B4DC43AB2264CE48009C08A0 /* Face */,
 				B49EF6462263723500C220B0 /* Tool */,
